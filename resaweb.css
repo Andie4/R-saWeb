@@ -1,0 +1,535 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    height: 100vh;
+    background-color: #0064A2;
+    font-family: montserrat;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 551;
+    font-style: normal;
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0;
+    background-color: rgba(117, 120, 131, 0.492);
+}
+
+nav{
+    max-width: 1100px;
+    margin: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    list-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    color: rgb(255, 255, 255);
+    /* background-color: blue; */
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+   
+}
+
+.navbar a{
+   text-decoration: none;
+   color:white ;
+}
+
+nav ul{
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.navbar li{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    flex-direction: row;
+     justify-content: space-between; 
+     flex-grow: 1;
+    /* background-color: blueviolet; */
+    /* margin: ; */
+}
+
+header .navbar li a:hover{ 
+    border-bottom: 3px solid;
+    color: rgb(0, 119, 255);
+}
+
+/* banière */
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('https://img.freepik.com/photos-gratuite/belle-nature-morte-eau_23-2149199525.jpg?t=st=1710707105~exp=1710710705~hmac=a735521990302169087ffff740e7ba53d77e6464da71c6302f925b267ed94333&w=1380');
+    background-size: cover; */
+    
+} 
+
+/* titre des pages  */
+.titrePages{
+    font-size: 3rem;
+    padding-top: 8%;
+    padding-left: 18%;
+    /* color: white; */
+    color: orange;
+    padding-bottom: 4%;
+}
+
+.imgBanniere{
+    position: relative;
+    display: inline-block;
+    padding: auto;
+    
+}
+
+
+.imgBanniere img{
+    height: auto;
+    display: block;
+    width: 100%;
+
+}
+
+.titreBanniere{
+    display: block;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(160, 41, 41, 0.7); */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 3.5rem;
+    color: transparent; /* Rendre le texte transparent */
+    -webkit-text-stroke-width: 8px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.scrollBas{
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Page d'accueil */
+
+.homePage{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+    padding: 2%;
+    padding-top: 4%;
+    color: white;
+    clear: both;
+}
+.container{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto; /* Les lignes s'ajustent automatiquement à la hauteur du contenu */
+    grid-template-columns: 1fr; /* Une colonne unique */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.apercu{
+    top: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+.sousTitre1{
+    font-size: 2.5rem;
+}
+
+.sousTitre2{
+    font-size: 2rem;
+}
+
+.contourBlanc{
+    color: transparent; /* Rendre le texte transparent */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0064A2;
+    background-color: white;
+}
+
+.policeBleu{
+    color: rgb(98, 98, 235);
+}
+
+.imgPartie1{
+    height: 60vh;
+    
+}
+
+.imgPartie2{
+    height: 50vh;
+    position: relative;
+}
+.haut{
+    top: 450px;
+}
+.gauche{
+    right: 500px;
+}
+
+.onglet {
+    display: inline-block;
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    margin-right: 20px; /* Espace entre les onglets */
+    text-align: center; /* Pour centrer le contenu */
+}
+
+.onglet img {
+    width: 100%;
+    height: auto; /* Pour conserver les proportions de l'image */
+    border: 1px solid #ccc; /* Optionnel : bordure autour de l'image */
+    border-radius: 5px; /* Optionnel : coins arrondis */
+}
+
+.onglet p {
+    margin-top: 5px; /* Espace entre l'image et le texte */
+}
+.espacePageAcceuil{
+    padding-bottom: 30%;
+}
+
+
+
+
+/* page notre histoire */
+.notreHistoire{
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.paragraphe1{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-left: 80px;
+
+}
+.paragrapheL{
+    float: left;
+    font-weight: lighter;
+    font-size: 1.2rem;   
+    margin-left: 3%; 
+    margin-right: 3%;
+
+}
+.paragrapheGras{
+    font-weight: bold;
+    color: orange;
+}
+.imgP1{
+    height: 55vh;
+    margin-right: 7%;
+}
+
+
+.paragraphe2{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.paragrapheR{
+    float: right;
+    flex: 1; /* Le texte prend autant d'espace que possible */
+    margin-right: 4%; /* Espacement entre le texte et l'image */
+    margin-left: 4%;
+}
+.imgP2{
+    height: 40vh;
+    margin-left: 3%;
+}
+
+
+.paragraphe3{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.imgP3{
+    height: 55vh;
+    margin-right: 3%;
+}
+
+
+.paragraphe4{
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding-right: 12%;
+    padding-left: 12%;
+}
+.imgP4{
+    height: 30vh;
+    margin-left: 3%;
+}
+
+
+.paragraphe5{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 4%;
+    padding-left: 3%;
+}
+.imgP5{
+    height: 30vh;
+    margin-left: 3%;
+}
+.espaceNotreHistoire{
+    padding-bottom: 10%;
+}
+
+
+/* slider */
+.mySlides{
+    height: 30vh;
+    margin-left: 30%;
+    display: flex;
+    align-items: center
+    
+}
+.w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%
+}
+.w3-center.w3-container.w3-section.w3-large.w3-text-white.w3-display-bottommiddle .w3-left,
+.w3-center.w3-container.w3-section.w3-large.w3-text-white.w3-display-bottommiddle .w3-right {
+    cursor: pointer;
+}
+
+/* excursions */
+.espaceExcursions{
+    padding-bottom: 10%;
+}
+
+
+/* page vie marine */
+.paragraphe{
+    color: #fff;
+    align-items: center;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+.paragrapheCentrer{
+    color: #fff;
+    align-items: center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+.vieMarine{
+    color:orange;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-weight: lighter;
+    font-size: 1.2rem; 
+}
+.espaceVieMarine{
+    padding-bottom: 5%;
+}
+.couleurSousTitreVieMarine{
+    color: rgb(253, 193, 119);
+}
+.conclusionVieMarine{
+    color: #0064A2;
+    align-items: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    font-weight: bolder;
+    background-color: white;
+    padding: 3%;
+    border-radius: 25% 10%;
+}
+
+/* A propos*/
+.aPropos{
+    color:orange;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-weight: lighter;
+    font-size: 1.2rem; 
+}
+.surlignement{
+    background-color: rgba(255, 189, 104, 0.639)
+}
+.espaceApropos{
+    padding-bottom: 14%;
+}
+
+/* footer avec vague */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
