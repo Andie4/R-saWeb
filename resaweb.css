@@ -40,8 +40,9 @@ nav{
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+
 }
 
 .logo{
@@ -50,6 +51,7 @@ nav{
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
+    padding-left: 20rem;
    
 }
 
@@ -62,7 +64,7 @@ nav ul{
     list-style: none;
     flex-grow: 1;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     gap: 3rem;
 }
 
@@ -71,7 +73,7 @@ nav ul{
     text-decoration: none;
     font-weight: 600;
     flex-direction: row;
-     justify-content: space-between; 
+     /* justify-content: space-between;  */
      flex-grow: 1;
     /* background-color: blueviolet; */
     /* margin: ; */
@@ -121,9 +123,9 @@ header .navbar li a:hover{
 }
 
 .titreBanniere{
-    display: block;
-    align-items: flex-end;
+    /* display: block;
     justify-content: center;
+    align-items: center; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -136,6 +138,35 @@ header .navbar li a:hover{
     -webkit-text-stroke-width: 8px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
 }
+
+.titreBanniere1 {
+justify-content: center;
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+border-radius: 5px;
+font-size: 5.5rem;
+color: transparent; /* Rendre le texte transparent */
+-webkit-text-stroke-width: 8px;
+-webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.titreBanniere2 {
+justify-content: center;
+justify-content: center;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+border-radius: 5px;
+font-size: 5.5rem;
+color: transparent; /* Rendre le texte transparent */
+-webkit-text-stroke-width: 8px;
+-webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
 .scrollBas{
     justify-content: center;
     align-items: center;
@@ -350,9 +381,25 @@ header .navbar li a:hover{
 }
 
 /* excursions */
-.espaceExcursions{
+.ficheProduitBlanc{
+    margin-left: 10em;
+    background-color: white;
+    width:55em;
+	height:40em;
+}
+.ficheProduitBleu{
+    margin-left: 1em;
+    background-color: rgb(0, 132, 255);
+    width:16em;
+	height:39em;
+        
+}
+
+
+.infoProduit{
 
 }
+
 .testE{
     color: blue;
     padding-bottom: 5%;
