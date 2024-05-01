@@ -1,0 +1,20 @@
+SOURCES : 
+
+1. FOOTER : animation vague par Nadine Coelho
+    https://codepen.io/vipenl26/pen/VwzqMge
+
+2, POISSON BLEU : poisson placer derrière le titre de la page
+    https://unsplash.com/fr/photos/poisson-madarin-bleu-xNpxB9bfLUE
+
+3. POISSON JAUNE : poisson placé derrrière le titre de la page 
+    https://unsplash.com/fr/photos/photo-en-gros-plan-de-poissons-bleus-et-verts-l-QdJMZX7PU
+
+4. SLIDER : slider dans la zone notre histoire
+
+
+
+
+
+
+
+https://caneval.butmmi.o2switch.site/Resa_web/resaweb.html
