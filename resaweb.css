@@ -236,16 +236,16 @@ color: transparent; /* Rendre le texte transparent */
 
 .onglet {
     display: inline-block;
-    width: 200px; /* Ajustez la largeur selon vos besoins */
+    width: 200px; /* Ajuster la largeur  */
     margin-right: 20px; /* Espace entre les onglets */
-    text-align: center; /* Pour centrer le contenu */
+    text-align: center; /* centrer le contenu */
 }
 
 .onglet img {
     width: 100%;
     height: auto; /* Pour conserver les proportions de l'image */
-    border: 1px solid #ccc; /* Optionnel : bordure autour de l'image */
-    border-radius: 5px; /* Optionnel : coins arrondis */
+    border: 1px solid #ccc; /* bordure autour de l'image */
+    border-radius: 5px; /* coins arrondis */
 }
 
 .onglet p {
