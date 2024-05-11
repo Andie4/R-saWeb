@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="resaweb.css">
 </head>
 <body>
+
+<div class="container espacePageAcceuil"></div>
   <header>
     <a href="resaweb.html" class="logo">ESM</a>
         <nav>
-
             <ul class="navbar">
                 <li><a href="notreHistoire.html">Notre histoire</a></li>     
                 <li><a href="excursions.html">Excursions</a></li>     
@@ -23,43 +24,85 @@
             </ul>
         </nav>
 </header>
+</div>
 
-<section class="notreHistoire espaceExcursions">
-    <h1 class="titrePages">Excursions</h1>
-    
-    <div class="ficheProduitBlanc">
-      <div class="ficheProduitBleu">
-        <div class="infoProduit">
-          <img src="" alt="">
-        </div>
+<section class="excursions .espaceExcursions">
+    <h1 class="titrePages ">Excursions</h1>
 
-      </div>
-    </div>
+    <main>
+      <section>
+          <img src="https://images.unsplash.com/photo-1531330785618-1a6430430a33?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h3>#1 concept <br>innovant</h3>
+          <p>Le Café des Chats est un restaurant et un salon de thé dans lequel une douzaine de chats vivent en
+              liberté.</p>
+      </section>
+      <section>
+          <img src="https://images.unsplash.com/photo-1531330785618-1a6430430a33?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h3>#2 plats <br>succulents</h3>
+          <p>Tous nos plats et desserts sont vraiment « fait maison », c’est à dire préparés sur place, par nos 4
+              cuisiniers.</p>
+      </section>
+      <section>
+          <img src="https://images.unsplash.com/photo-1531330785618-1a6430430a33?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h3>#3 chats <br>attachants</h3>
+          <p>Les chats ont été choisis en fonction de leur caractère : ils aiment la présence d’autres chats et
+              apprécient la présence humaine. </p>
+      </section>
+      <section>
+          <img src="https://images.unsplash.com/photo-1531330785618-1a6430430a33?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <h3>#4 respect <br>important</h3>
+          <p>Les chats ne doivent pas être dérangés quand ils dorment, ils ont aussi de nombreux espaces en hauteur
+              pour satisfaire leurs besoins de calme.</p>
+
+              <div class="divForm">
+                <form method="post" action="excursion.php" enctype="multipart/form-data">
+
+                  <label for="nom">Nom</label>
+                      <input type="text" id="nom" name="nom_client" required><br>
+                      
+                      <label for="prenom">Prenom</label>
+                      <input type="text" id="prenom" name="prenom_client" placeholder="Votre prenom"><br> 
+            
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="mail_client"><br>
+            
+                      <label for="Excursion">Excursion</label>
+                      <select id="Excursion" name="id_excursion">
+                          <optgroup label="Types">
+                          <option value="">-----</option>
+                              <option value="poisson">Le champs de poissons</option>
+                              <option value="requin">Les terreurs des mers</option>
+                              <option value="epave" selected>Le monde caché</option>
+                          </optgroup>
+                      </select><br>
+            
+                        <label for="jour">Jour</label>
+                      <input type="date" id="jour" name="date_reservation"><br>
+            
+                      <label for="Horaire">Horaire</label>
+                      <select id="Horaire" name="horaire">
+                          <optgroup label="Horaires">
+                              <option value="8h">8h-10h</option>
+                              <option value="10h">10h-12h</option>
+                              <option value="13h" selected>13h-15h</option>
+                              <option value="15h" selected>15h -17h</option>
+            
+                          </optgroup>
+                      </select><br>
+            
+                      <label for="nombre">Nombre de billets</label>
+                      <input type="number" id="nombre" name="nombre_billets" min="1" max="10" required><br>
+                      
+               
+                      <input type="submit" value="valider" name="valider">
+                  </form>
+              </div>
+      
+            </section>
+      
+  </main>
 
 
-
-
-
-    <div class="paragraphe3">
-        <p class="paragrapheL">Que vous soyez un plongeur <span class="paragrapheGras">débutant</span> cherchant à faire vos premières bulles ou un <span class="paragrapheGras">plongeur expérimenté</span> en quête d'aventures plus audacieuses, nous avons une excursion pour vous. De nos sites de plongée locaux aux destinations exotiques à travers le monde, nous vous invitons à nous rejoindre pour une aventure sous-marine comme aucune autre.</p>
-        <img src="https://media.istockphoto.com/id/623176710/fr/photo/repos-actif-plong%C3%A9e-dans-les-r%C3%A9cifs-coralliens.jpg?s=2048x2048&w=is&k=20&c=vkc1F_0IAv65lN_R68OlEcwpPqRqAIY7G3dtKeMs0_g=" alt="" class="imgP3"> 
-    </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    
-         
-    </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-        
-    </section>
     
 
 
