@@ -3,11 +3,12 @@
 *::before {
     box-sizing: border-box;
 }
-.paletteCouleurAsupprimer{
+
+.paletteCouleurAsupprimer {
     color: #F9F7F0;
     color: #18B7BE;
     color: #178CA4;
-    color: #072A40; 
+    color: #072A40;
 }
 
 
@@ -22,9 +23,9 @@
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
     border: 0 !important;
-    
 
-  } 
+
+}
 
 body {
     margin: 0;
@@ -66,13 +67,15 @@ nav {
     justify-content: center;
 }
 
+
+
 .logo {
     color: rgb(255, 255, 255);
     /* background-color: blue; */
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
-    padding-left: 18%;
+    margin-right: 30px;
 }
 
 .navbar a {
@@ -98,8 +101,42 @@ nav ul {
     /* background-color: blueviolet; */
     /* margin: ; */
 }
+@media (width<=768px) {
+    nav {
+        margin: auto;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        list-style: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    
+    .logo {
+        color: rgb(255, 255, 255);
+        /* background-color: blue; */
+        font-weight: bold;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+}
 
- .navbar li a:hover {
+.navbar li a:hover {
     border-bottom: 3px solid;
     /* color: rgb(0, 119, 255); */
     color: #e7864a;
@@ -122,7 +159,6 @@ nav ul {
     font-size: 3rem;
     margin-top: -52px;
     padding-top: 10px;
-    padding-left: 80px;
     color: #178CA4;
 }
 
@@ -132,27 +168,12 @@ section {
     color: #072A40;
 }
 
-
-.imgBanniere {
-    position: relative;
-    display: inline-block;
-    padding: auto;
-
-}
-
-
-.imgBanniere img {
-    height: auto;
-    display: block;
-    width: 100%;
-
-}
+/* .imgBanniere {
+    background-image: url("https://images.unsplash.com/photo-1508311603478-ce574376c3cf?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position:100%;
+} */
 
 .titreBanniere {
-    text-align: center;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
     transform: translate(-50%, -50%);
     /* background-color: rgba(160, 41, 41, 0.7); */
     border-radius: 5px;
@@ -161,11 +182,14 @@ section {
     /* Rendre le texte transparent */
     -webkit-text-stroke-width: 8px;
     -webkit-text-stroke-color: rgb(224, 218, 218);
-    letter-spacing: 4px
+    letter-spacing: 4px;
+    display: block;
 
 }
 
-
+.imgPresentation{
+    width: 50vh;
+}
 /* Page d'accueil */
 
 .homePage {
@@ -177,7 +201,7 @@ section {
     padding-top: 4%;
     color: white;
     clear: both;
-    
+
 }
 
 h1 span {
@@ -208,7 +232,6 @@ h1 span {
 
 .sousTitre2 {
     font-size: 2rem;
-   
     color: #072A40;
 }
 
@@ -216,14 +239,14 @@ h1 span {
     color: transparent;
     /* Rendre le texte transparent */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F9F7F0;;
+    -webkit-text-stroke-color: #F9F7F0;
     background-color: #178CA4;
     width: fit-content;
 }
 
 .policeBleu {
     color: #072A40;
-    
+
 }
 
 .imgPartie1 {
@@ -261,6 +284,8 @@ h1 span {
     border: 1px solid #ccc;
     /* Optionnel : bordure autour de l'image */
     border-radius: 5px;
+    color: red;
+    border-radius: red;
     /* Optionnel : coins arrondis */
 }
 
@@ -277,9 +302,52 @@ h1 span {
 
 }
 
+/* .apercu{
 
+} */
 
+.apercuCatalogue {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: center;
+}
 
+.apercuArticleCatalogue {
+    
+    margin: 10px;
+    background-color: #178CA4;
+    padding-bottom: 1px;
+    border-radius: 20px;
+}
+
+.imgApercu {
+    height: 30vh;
+    width: 40vh;
+    border-radius: 20px;
+}
+
+.sousTitreApercu {
+    margin: 15px;
+}
+
+.reserver {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+.lienReserver{
+   font-size: 2.4rem;
+   background-color:#0064A2;
+   color: #F9F7F0;
+   padding: 15px;
+   text-decoration: none;
+   border-radius: 10px;
+}
+.lienReserver :hover{
+    background-color:#e7864a;
+    color: #F9F7F0;
+    
+ }
 /* page notre histoire */
 .notreHistoire {
     font-weight: lighter;
@@ -288,6 +356,7 @@ h1 span {
     margin-left: 150px;
     margin-right: 150px;
 }
+
 
 .paragraphe1 {
     display: flex;
@@ -300,7 +369,24 @@ h1 span {
     float: left;
     font-weight: lighter;
     margin-right: 20px;
+    margin-bottom: 10px;
 
+
+}
+.imgP1 {
+    height: 55vh;
+   
+}
+@media (width<=900px) {
+    .paragraphe1 {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgP1 {
+        height: 52vh;
+    }
 }
 
 .paragrapheGras {
@@ -308,12 +394,8 @@ h1 span {
     color: #18b7be;
 }
 
-.imgP1 {
-    height: 55vh;
-}
-
-
 .paragraphe2 {
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -322,16 +404,26 @@ h1 span {
 }
 
 .paragrapheR {
-    float: right;
-    flex: 1;
     font-weight: lighter;
     margin-left: 20px;
-
-
 }
 
+
 .imgP2 {
-    height: 40vh;
+    width: 70%;
+    max-width: 500px;
+}
+@media (width<=1270px) {
+    .paragraphe2 {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        font-weight: lighter;
+    }
+    .imgP2 {
+        max-width: 300px;
+    }
+
 }
 
 
@@ -340,13 +432,27 @@ h1 span {
     align-items: center;
     justify-content: flex-start;
     font-weight: lighter;
+    margin-top: 30px;
 
 }
 
 .imgP3 {
     height: 55vh;
 }
+@media (width<=1100px) {
+    .paragraphe3 {
+        display: flex;
+        flex-direction: column;
+        font-weight: lighter;
+        margin-top: 30px;
+    
+    }
+    
+    .imgP3 {
+        height: 40vh;
+    }
 
+}
 
 .paragraphe4 {
     align-items: center;
@@ -370,10 +476,26 @@ h1 span {
 .imgP5 {
     height: 30vh;
 }
+@media (width<=1100px) {
+    .paragraphe5 {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .imgP5 {
+        height: 30vh;
+    }
 
+}
 
 
 /* slider */
+.imgSlider{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
 .js-slider {
     position: relative;
     width: 500px;
@@ -447,52 +569,92 @@ h1 span {
     right: -15px;
 }
 
-img {
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-}
+
 
 
 
 /* excursions */
-.excursions{
+.excursions {
     font-weight: lighter;
     font-size: 1.2rem;
     margin-left: 150px;
     margin-right: 150px;
-
-
-}
-.catalogue{
-    display: flex;
-    
-    
-}
-.articleCatalogue{
-    align-items: center;
+    display: block;
     justify-content: center;
-    max-width: 40vh;
+
+}
+
+.catalogue {
+    display: flex;
+    justify-content: center;
+
+}
+
+.articleCatalogue {
+    /* height: 70vh;change la longeur de la boite ici en bleu */
+    width: 40vh;
     margin: 10px;
     background-color: #0064A2;
     border-radius: 15px;
+    
 }
-.imgCatalogue{
+@media (width<=887px){
+    .catalogue {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+}
+
+
+.imgCatalogue {
     height: 30vh;
     width: 40vh;
     border-radius: 15px;
 
 }
-.divForm{
+
+.sousTitreExcursions {
+    padding: 8px;
+    /* color: #F9F7F0; */
+    color: #18b7be;
 }
-form{
-    margin-top: 600px;
-    background-color:#178CA4;
-    padding: 30px;
-    border-radius: 10px;
+
+.texteExcursions {
+    padding: 10px;
     justify-content: center;
-    align-items: center;
+    color: #F9F7F0;
 }
+
+.divForm{
+    display: flex;
+    justify-content: center;
+} 
+form {
+    background-color: #178CA4;
+    padding: 30px;
+    /* border-radius: 10px; */
+    width: fit-content;
+    color: #F9F7F0;
+    
+}
+.rectangle{
+    width : 200px;
+    height : 500px;
+}
+.titreForm{
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+@media (width<=779px){
+    .rectangle{
+        width : 200px;
+        height : 550px;
+    }
+}
+
 /* Il faut jouer avec les display, flex et block , et les justify content align items --> Pour mettre le formulaire sous les 3 types d'excurions du catalogue*/
 
 
@@ -500,23 +662,31 @@ form{
 /* page vie marine */
 
 .vieMarine {
-    align-items: center;
+   
     justify-content: flex-start;
     font-weight: lighter;
     font-size: 1.2rem;
     margin-left: 150px;
     margin-right: 150px;
 }
-.containerBandeau{
+
+.containerBandeau {
     display: flex;
+    justify-content: center;
 }
-.bandeau{
+
+
+.bandeau {
     margin-top: 30px;
     height: 10vh;
     width: 30vh;
     margin-bottom: 30px;
-    
+}
 
+@media (width<=1250px){
+    .bandeau {
+        height: 0px;
+    }
 }
 .paragraphe {
     color: #072A40;
@@ -534,7 +704,13 @@ form{
     font-weight: bold;
 
 }
-
+@media (width<=779px){
+    .paragrapheCentrer {
+        color: #072A40;
+        font-weight: bold;
+    
+    }
+}
 
 
 
@@ -549,8 +725,17 @@ form{
     margin-left: 300px;
     font-weight: bolder;
     background-color: #18b7be;
-    padding: 50px ;
-    border-radius: 80px 10px ;
+    padding: 50px;
+    border-radius: 80px 10px;
+}
+@media (width<=779px){
+    .conclusionVieMarine {
+        color: #F9F7F0;
+        font-weight: bolder;
+        background-color: #18b7be;
+        padding: 50px;
+        border-radius: 80px 10px;
+    }
 }
 
 /* A propos*/
@@ -648,6 +833,7 @@ summary {
     cursor: pointer;
 
 }
+
 
 
 /* footer avec vague */
