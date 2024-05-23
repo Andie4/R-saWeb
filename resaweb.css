@@ -308,7 +308,6 @@ h1 span {
 
 .apercuCatalogue {
     display: flex;
-    margin-bottom: 80px;
     justify-content: center;
 }
 
@@ -596,6 +595,7 @@ h1 span {
     margin: 10px;
     background-color: #0064A2;
     border-radius: 15px;
+    padding-bottom: 0px;
     
 }
 @media (width<=887px){
@@ -624,7 +624,8 @@ h1 span {
 .texteExcursions {
     padding: 10px;
     justify-content: center;
-    color: #F9F7F0;
+    color: #178CA4;
+
 }
 
 .divForm{
@@ -798,6 +799,7 @@ summary::after {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 /* styles ported over from the second example */
 
