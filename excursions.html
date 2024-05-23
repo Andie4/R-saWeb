@@ -16,115 +16,114 @@
   <div class="container espacePageAcceuil"></div>
 
   <header>
-                
+
     <nav>
-        <a href="resaweb.html" class="logo">ESM</a>
-        <ul class="navbar">
-            <li><a href="notreHistoire.html">Notre histoire</a></li>
-            <li><a href="excursions.html">Excursions</a></li>
-            <li><a href="vieMarine.html">Vie marine</a></li>
-            <li><a href="aPropos.html">A propos</a></li>
-        </ul>
+      <a href="resaweb.html" class="logo">ESM</a>
+      <ul class="navbar">
+        <li><a href="notreHistoire.html">Notre histoire</a></li>
+        <li><a href="excursions.html">Excursions</a></li>
+        <li><a href="vieMarine.html">Vie marine</a></li>
+        <li><a href="aPropos.html">A propos</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
   </div>
 
   <section class="excursions .espaceExcursions">
-    <h1 class="titrePages ">Excursions</h1>
 
-    <main class="catalogue">
-      <section class="articleCatalogue">
-        <img
+    <h1 class="titrePages ">Excursions</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Rechercher...">
+      <button id="search-bateau">Bateau</button>
+      <button id="search-masque">Masque et tuba</button>
+      <button id="search-plongee">Plongée sous marine</button>
+      <button id="clear-filter">Tout afficher</button>
+  </div>
+     
+
+
+    <main class="catalogue" id="catalogue">
+
+      <section class="articleCatalogue" data-price="400" data-keywords="bateau">
+        <a href="LeChampsDesPoissons.html"><img
           src="https://plus.unsplash.com/premium_photo-1682623305315-806515db9c3f?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="" class="imgCatalogue">
-        <h3 class="sousTitreExcursions">1 - Le champs des poissons</h3><br>
-        <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
-          la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçant
-          de façons coordonné.
-
-          Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer</p>
+        <h3 class="sousTitreExcursions">1 - Le champs des poissons</h3></a>
+        
       </section>
-      <section class="articleCatalogue">
-        <img
+
+      <section class="articleCatalogue" data-price="100" data-keywords="masque">
+        <a href="lesTerreursDesMers.html"><img
           src="https://plus.unsplash.com/premium_photo-1682091874987-687e0c1026b8?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="" class="imgCatalogue">
-        <h3 class="sousTitreExcursions">2 - Les terreurs des mers</h3><br>
-        <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
-          la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçant
-          de façons coordonné.
-
-          Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer</p>
+          alt="" class="imgCatalogue" >
+        <h3 class="sousTitreExcursions">2 - Les terreurs des mers</h3></a>
+        
       </section>
-      <section class="articleCatalogue">
-        <img
-          src="https://images.unsplash.com/photo-1598977115413-3b0d09af688c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="" class="imgCatalogue">
-        <h3 class="sousTitreExcursions">3 - Le monde caché</h3><br>
-        <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
-          la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçant
-          de façons coordonné.
 
-          Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer </p>
+      <section class="articleCatalogue" data-price="200" data-keywords="plongee">
+        <a href="leMondeCaché.html"><img
+          src="https://images.unsplash.com/photo-1598977115413-3b0d09af688c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" class="imgCatalogue" >
+          <h3 class="sousTitreExcursions">3 - Le monde caché</h3></a>
       </section>
     </main>
+   
+    <section class="FAQ">
+      <div class="step2">
+          <details>
+                  <summary>1. Quelles sont les précautions de sécurité essentielles avant une plongée sous-marine ?</summary>
+                  <p>Avant de plonger, il est crucial de s'assurer que votre équipement est en bon état, de vérifier les conditions météorologiques et de la mer, ainsi que de planifier votre plongée en fonction de votre niveau de compétence et des caractéristiques du site.</p>
+          </details>
 
+          <details>
+                  <summary>2. Quel équipement de sécurité devrais-je avoir lors d'une plongée sous-marine ?</summary>
+                  <p>L'équipement de sécurité comprend un gilet stabilisateur, un détendeur de secours, une lampe de plongée, une balise de signalisation, un sifflet, un couteau de plongée et une trousse de premiers secours. Une combinaison de plongée adéquate est également importante pour maintenir la chaleur corporelle.</p>
+          </details>
 
-    <section>
-      <div class="divForm">
-        <img
-          src="https://plus.unsplash.com/premium_photo-1710313643212-e30d7db5e108?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZvbmQlMjBtYXJpbnxlbnwwfDF8MHx8fDA%3D"
-          alt="" class="rectangle">
-        <form method="post" action="excursion.php" enctype="multipart/form-data">
-<h4 class="titreForm">Réserver </h4>
-          <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom_client" required><br><br>
+          <details>
+                  <summary>3. Comment puis-je éviter les accidents de plongée ?</summary>
+                  <p>Pour éviter les accidents, suivez toujours les règles de sécurité, plongez avec un partenaire et respectez les limites de votre certification de plongée. Évitez de plonger en cas de fatigue, de maladie ou de consommation d'alcool ou de drogues.</p>
+          </details>
 
-          <label for="prenom">Prenom</label>
-          <input type="text" id="prenom" name="prenom_client" placeholder="Votre prenom"><br><br>
+          <details>
+              <summary>4. Quelles sont les règles de sécurité pendant la plongée ?</summary>
+              <p>Tenez-vous au courant de votre consommation d'air et de votre temps de plongée, respectez les limites de profondeur recommandées et surveillez votre profondeur. Communiquez régulièrement avec votre binôme et signalez tout problème ou inconfort. </p>
+          </details>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="mail_client"><br><br>
+          <details>
+              <summary>5. Que faire en cas d'urgence sous-marine ?</summary>
+              <p>En cas d'urgence, restez calme, signalez le problème à votre binôme et suivez les procédures d'urgence enseignées lors de votre formation en plongée. Cela peut inclure la remontée contrôlée vers la surface, le partage de gaz avec votre binôme ou l'utilisation de la trousse de premiers secours pour les blessures mineures.</p>
+          </details>
 
-          <label for="Excursion">Excursion</label>
-          <select id="Excursion" name="id_excursion">
-            <optgroup label="Types">
-              <option value="">-----</option>
-              <option value="poisson">Le champs de poissons</option>
-              <option value="requin">Les terreurs des mers</option>
-              <option value="epave" selected>Le monde caché</option>
-            </optgroup>
-          </select><br><br>
+          <details>
+              <summary>6. Comment puis-je me préparer à une plongée sécurisée ?</summary>
+              <p>Assurez-vous d'avoir une bonne condition physique, de suivre une formation en plongée certifiée, et de pratiquer régulièrement vos compétences en plongée. Planifiez soigneusement chaque plongée, en tenant compte des conditions météorologiques et des caractéristiques du site.</p>
+          </details>
 
-          <label for="jour">Jour</label>
-          <input type="date" id="jour" name="date_reservation"><br><br>
+          <details>
+              <summary>7. Dois-je souscrire une assurance plongée ?</summary>
+              <p>Il est fortement recommandé de souscrire une assurance plongée qui couvre les frais médicaux d'urgence, l'évacuation médicale, et les accidents de plongée. Cela peut vous protéger financièrement en cas d'incident sous-marin.</p>
+          </details>
 
-          <label for="Horaire">Horaire</label>
-          <select id="Horaire" name="horaire">
-            <optgroup label="Horaires">
-              <option value="8h">8h-10h</option>
-              <option value="10h">10h-12h</option>
-              <option value="13h" selected>13h-15h</option>
-              <option value="15h" selected>15h -17h</option>
-
-            </optgroup>
-          </select><br><br>
-
-          <label for="nombre">Nombre de billets</label>
-          <input type="number" id="nombre" name="nombre_billets" min="1" max="10" required><br><br>
-
-          <input type="submit" name="suivant">
-          <input type="submit" value="valider" name="valider">
-        </form>
+          <details>
+              <summary>8. Quelles sont les précautions à prendre après une plongée ?</summary>
+              <p>Après une plongée, observez un intervalle de surface approprié pour éviter la maladie de décompression, hydratez-vous bien, et surveillez les signes de fatigue ou de symptômes de maladie de décompression. En outre, assurez-vous de nettoyer et de ranger votre équipement de plongée correctement pour qu'il soit prêt pour la prochaine plongée.</p>
+          </details>
+          
       </div>
-    </section>
+      
+
+
+
+</section>
+      
+  </section>
+
+    
 
 
   </section>
-
-
-
-
 
 
   <footer class="footer">
@@ -134,20 +133,7 @@
       <div class="wave" id="wave3"></div>
       <div class="wave" id="wave4"></div>
     </div>
-    <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a></li>
-    </ul>
+   
 
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="resaweb.html">Accueil</a></li>
@@ -163,6 +149,8 @@
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="resaweb.js"></script>
+
 </body>
 
 </html>
