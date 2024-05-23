@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resaweb.css">
+</head>
+<body>
+    <div class="container espacePageAcceuil"></div>
+
+    <header>
+
+        <nav>
+          <a href="resaweb.html" class="logo">ESM</a>
+          <ul class="navbar">
+            <li><a href="notreHistoire.html">Notre histoire</a></li>
+            <li><a href="excursions.html">Excursions</a></li>
+            <li><a href="vieMarine.html">Vie marine</a></li>
+            <li><a href="aPropos.html">A propos</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div>
+        <h3>Les terreurs des mers </h3>
+        <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
+        la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
+        Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer</p>
+    </div>
+    <section>
+        <div class="divForm">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1710313643212-e30d7db5e108?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZvbmQlMjBtYXJpbnxlbnwwfDF8MHx8fDA%3D"
+            alt="" class="rectangle">
+          <form method="post" action="excursion.php" enctype="multipart/form-data">
+            <h4 class="titreForm">Réserver </h4>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom_client" required><br><br>
+  
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom_client" placeholder="Votre prenom"><br><br>
+  
+            <label for="email">Email</label>
+            <input type="email" id="email" name="mail_client"><br><br>
+  
+            <label for="Excursion">Excursion</label>
+            <select id="Excursion" name="id_excursion">
+              <optgroup label="Types">
+                <option value="">-----</option>
+                <option value="poisson">Le champs de poissons</option>
+                <option value="requin">Les terreurs des mers</option>
+                <option value="epave" selected>Le monde caché</option>
+              </optgroup>
+            </select><br><br>
+  
+            <label for="jour">Jour</label>
+            <input type="date" id="jour" name="date_reservation"><br><br>
+  
+            <label for="Horaire">Horaire</label>
+            <select id="Horaire" name="horaire">
+              <optgroup label="Horaires">
+                <option value="8h">8h-10h</option>
+                <option value="10h">10h-12h</option>
+                <option value="13h" selected>13h-15h</option>
+                <option value="15h" selected>15h -17h</option>
+  
+              </optgroup>
+            </select><br><br>
+  
+            <label for="nombre">Nombre de billets</label>
+            <input type="number" id="nombre" name="nombre_billets" min="1" max="10" required><br><br>
+  
+            <input type="submit" name="suivant">
+            <input type="submit" value="valider" name="valider">
+          </form>
+        </div>
+      </section>
+
+</body>
+</html>
