@@ -586,6 +586,7 @@ h1 span {
 .catalogue {
     display: flex;
     justify-content: center;
+    display: grid;
 
 }
 
@@ -600,13 +601,41 @@ h1 span {
 }
 @media (width<=887px){
     .catalogue {
-        display: flex;
         flex-direction: column;
         justify-content: center;
     
     }
 }
 
+.un{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.deux{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.trois{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+@media (width<=1030px){
+    .un{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .deux{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .trois{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
 
 .imgCatalogue {
     height: 30vh;
@@ -619,6 +648,7 @@ h1 span {
     padding: 8px;
     /* color: #F9F7F0; */
     color: #18b7be;
+    text-decoration: none;
 }
 
 .texteExcursions {
@@ -722,12 +752,12 @@ form {
 .conclusionVieMarine {
     color: #F9F7F0;
     align-items: center;
-    margin-right: 300px;
-    margin-left: 300px;
+    
     font-weight: bolder;
     background-color: #18b7be;
     padding: 50px;
     border-radius: 80px 10px;
+    min-width: 200px;
 }
 @media (width<=779px){
     .conclusionVieMarine {
