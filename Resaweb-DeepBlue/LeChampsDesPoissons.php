@@ -100,7 +100,7 @@ mail($mail_client, $sujet, $message);
           <img
             src="https://plus.unsplash.com/premium_photo-1710313643212-e30d7db5e108?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZvbmQlMjBtYXJpbnxlbnwwfDF8MHx8fDA%3D"
             alt="" class="rectangle">
-            <form method="post" action="excursions.php" enctype="multipart/form-data">
+            <form method="post" action="LeChampsDesPoissons.php" enctype="multipart/form-data">
 
 <label for="nom">Nom</label>
     <input type="text" id="nom" name="nom_client" required placeholder="Votre nom"><br>
@@ -118,6 +118,9 @@ mail($mail_client, $sujet, $message);
             <option value="1">Le champs de poissons</option>
             <option value="2">Les terreurs des mers</option>
             <option value="3" >Le monde caché</option>
+            <option value="4" >Les oiseaux aquatiques</option>
+            <option value="5" >La danse des méduses</option>
+            <option value="6" >Exploration d'épaves</option>
         </optgroup>
     </select><br>
 
