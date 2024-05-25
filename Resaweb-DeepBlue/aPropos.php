@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Blue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container espacePageAcceuil"></div>
+
+    <header>
+                
+    <nav>
+      <a href="resaweb.php" class="logo">ESM</a>
+      <ul class="navbar">
+        <li><a href="notreHistoire.php">Notre histoire</a></li>
+        <li><a href="excursions.php">Excursions</a></li>
+        <li><a href="vieMarine.php">Vie marine</a></li>
+        <li><a href="aPropos.php">A propos</a></li>
+      </ul>
+    </nav>
+    </header>
+
+  </div>
+
+    <section class="aPropos ">
+        <h1 class="titrePages">A propos</h1>
+        <h3 class="titresParagraphes">Autrice du site</h3><br>
+        <p class="paragraphe">Ce site à été créé par <span>Andréa</span> élève en première année de BUT MMI à Champs sur marne dans le cadre d'une SAE ( situation d'apprentissage évalué). j'ai choisis ce thème car j'aime beaucoup le monde océanique pour les animaux qui y habitent, pour ces beaux coraux ou encore blablablabla </p> <br><br>
+        <h3 class="titresParagraphes">Mentions légales</h3><br>
+        <p class="paragraphe">
+            Hébergeur : Université Gustave Eiffel
+            <br>Université Gustave Eiffel : 5 boulevard Descartes - Champs-sur-Marne - 77454 Marne-la-Vallée <br>
+
+            <br> © 2023 Tous droits réservés par CANEVAL Andréa <br>
+            <br>Le formulaire permettant la création d’une analogie personnalisée recueille votre adresse de courriel et votre adresse IP. Pour toute question portant sur la collecte ou le traitement de vos données à caractère personnel par l’UPEM, vous pouvez saisir la personne responsable du traitement des données qui est : Philippe Gambette (philippe.gambette@univ-eiffel.fr). Les fichiers détenus par l'UPEM qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne feront jamais l'objet d'une commercialisation. <br><br>
+        
+            <br> Sources des images : <br>
+            <br> Aquarelle :<a
+                href="https://www.freepik.com/free-vector/watercolor-blue-background_23761117.htm?query=bleu#from_view=detail_alsolike">Freepik</a>
+            <br> Aigle : <a
+                href="https://www.shutterstock.com/fr/image-vector/bald-eagle-isolated-on-white-this-1059061598">Alexey
+                Pushkin </a>
+            <br> Bonzaï : <a
+                href="https://www.shutterstock.com/fr/image-illustration/zen-bonsai-tree-green-neutral-background-2204308917">
+                CGS Graphics</a>
+            <br> Musique : <a
+                href="https://www.shutterstock.com/fr/image-vector/contrabass-bow-stringed-musical-instruments-illustration-1951861300">
+                Nataliia Reshetova</a>
+            <br> Rire : <a
+                href="https://www.istockphoto.com/fr/vectoriel/enfants-enfants-enfants-riant-ensemble-vecteur-gm1171405497-324515183?phrase=rire">
+                Colorfuel Studio</a>
+            <br> Printemps : <a href="https://pixabay.com/fr/vectors/myosotis-fleurs-plantes-6009034/">dandelion_tea
+
+            </a>
+            <br> Vert : <a
+                href="https://www.istockphoto.com/fr/vectoriel/feuilles-nature-logo-vector-illustration-gm1430703073-473497676">
+                AlfinuZafir</a>
+            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
+                OpenClipart-Vectors</a>
+            
+            
+                
+          
+    </section>
+   
+
+    <footer class="footer">
+        <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+        </div>
+           
+
+            <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
+      <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
+      <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
+      <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>
+      <li class="menu__item"><a class="menu__link" href="aPropos.php">A propos</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
+    </ul>
+
+            <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+        </footer>
+  <script  src="resaweb.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          
+</body>
+</html>
