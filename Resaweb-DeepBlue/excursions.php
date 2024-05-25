@@ -64,23 +64,23 @@
     <h3 class="sousTitreExcursions">Le monde caché</h3></a>
 </div>
 
-<div class="articleCatalogue" data-price="200" data-keywords="plongee"><a href="leMondeCache.php"><img
+<div class="articleCatalogue" data-price="200" data-keywords="bateau"><a href="lesOiseauxAquatiques.php"><img
   src="https://images.unsplash.com/photo-1598977115413-3b0d09af688c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   alt="" class="imgCatalogue" >
   <h3 class="sousTitreExcursions">Les oiseaux aquatiques</h3></a>
 </div>
 
 <div class="articleCatalogue " data-price="100" data-keywords="masque">
-  <a href="lesTerreursDesMers.php"><img
+  <a href="laDanseDesMeduses.php"><img
     src="https://plus.unsplash.com/premium_photo-1682091874987-687e0c1026b8?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     alt="" class="imgCatalogue" >
   <h3 class="sousTitreExcursions">La danse des méduses</h3></a>
 </div>
 
-<div class="articleCatalogue " data-price="400" data-keywords="bateau"><a href="LeChampsDesPoissons.php"><img
+<div class="articleCatalogue " data-price="400" data-keywords="plongee"><a href="explorationEpaves.php"><img
   src="https://plus.unsplash.com/premium_photo-1682623305315-806515db9c3f?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   alt="" class="imgCatalogue">
-<h3 class="sousTitreExcursions">L'épave</h3></a></div>
+<h3 class="sousTitreExcursions">Exploration d'épaves</h3></a></div>
     
     </main>
    
