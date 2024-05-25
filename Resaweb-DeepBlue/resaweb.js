@@ -1,5 +1,5 @@
   // filtre selon des mots prédéfinie
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var searchBateauBtn = document.getElementById('search-bateau');
     var searchMasqueBtn = document.getElementById('search-masque');
     var searchPlongeeBtn = document.getElementById('search-plongee');
