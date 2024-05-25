@@ -22,78 +22,28 @@
       </ul>
     </nav>
     </header>
-
-
-    <div>
-        <h3>Le champs des poissons </h3>
-        <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
-        la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
-        Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer</p>
-    </div>
     <section>
 
-<?php 
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "resawebdeepblue";
 
-// $servername = "localhost";
-// $username = "caneval";
-// $password = "CV2rqsrtDxWHNy5";
-// $dbname = "caneval_resaweb";
-
-try {
-    $conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    <div class="detailsExcursions">
+      <h1 class="detail-title">Le champs des poissons</h1>
     
-    // $conn = new PDO('mysql:host=localhost;dbname=caneval_resaweb', 'caneval', 'CV2rqsrtDxWHNy5', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+      <div class="excursion-description">
+        <h2>Description</h2>
+        <p>
+          Découvrez la richesse de la vie marine en explorant "Le champs des poissons". Lors de cette excursion en bateau, vous aurez l'occasion de voir une variété de poissons tropicaux et de coraux magnifiques. Préparez-vous à être émerveillé par les couleurs vibrantes et la diversité des espèces sous-marines.
+          Cette excursion vas vous permettre de voir les différents poissons présents près de
+        la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
+        Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer
+        </p>
+      </div>
+      <div class="excursion-info">
+        <p class="excursion-type"> <span class="gras">Type:</span> Excursion en bateau</p>
+        <p class="excursion-price"><span class="gras">Prix:</span> 400€</p>
+      </div>
+      
+    </div>
 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "La connexion a échoué : " . $e->getMessage();
-}
-
-if(isset($_POST['valider'])) {
-    $id_excursion = $_POST["id_excursion"];
-    $date_reservation = $_POST["date_reservation"];
-    $horaire = $_POST["horaire"];
-    $nombre_billets = $_POST["nombre_billets"];
-    $nom_client = $_POST["nom_client"];
-    $prenom_client = $_POST["prenom_client"];
-    $mail_client = $_POST["mail_client"];
-
-    $sql = "INSERT INTO Reservation (excursion_id, date_reservation, horaire, nombre_billets, mail_client_fk) VALUES (:id_excursion, :date_reservation, :horaire, :nombre_billets, :mail_client_fk)";
-    $stmt = $conn->prepare($sql);
-
-    $stmt->bindParam(':id_excursion', $id_excursion);
-    $stmt->bindParam(':date_reservation', $date_reservation);
-    $stmt->bindParam(':horaire', $horaire);
-    $stmt->bindParam(':nombre_billets', $nombre_billets);
-    $stmt->bindParam(':mail_client_fk', $mail_client);
-
-    $stmt->execute();
-    
-    $sql = "INSERT INTO Client (mail_client, nom_client, prenom_client) VALUES (:mail_client, :nom_client, :prenom_client)";
-    $stmt = $conn->prepare($sql);
-
-    $stmt->bindParam(':mail_client', $mail_client);
-    $stmt->bindParam(':nom_client', $nom_client);
-    $stmt->bindParam(':prenom_client', $prenom_client);
-   
-
-    $stmt->execute();
-
-    //  Configuration de l'e-mail pour l'utilisateur qui a réservé
-$sujet = "Confirmation de réservation DeepBlue ";
-$message = "Merci à vous, votre réservation a été confirmée. A bientôt dans l'eau ! ";
-
-//  Mail pour l'utilisateur qui a réservé
-mail($mail_client, $sujet, $message);
-}
-
-
-?>
 
    
         <div class="divForm">
@@ -168,7 +118,69 @@ mail($mail_client, $sujet, $message);
 
         <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
     </footer>
+
+    <?php 
+// Connexion à la base de données
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "resawebdeepblue";
+
+// $servername = "localhost";
+// $username = "caneval";
+// $password = "CV2rqsrtDxWHNy5";
+// $dbname = "caneval_resaweb";
+
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     
+    // $conn = new PDO('mysql:host=localhost;dbname=caneval_resaweb', 'caneval', 'CV2rqsrtDxWHNy5', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "La connexion a échoué : " . $e->getMessage();
+}
+
+if(isset($_POST['valider'])) {
+    $id_excursion = $_POST["id_excursion"];
+    $date_reservation = $_POST["date_reservation"];
+    $horaire = $_POST["horaire"];
+    $nombre_billets = $_POST["nombre_billets"];
+    $nom_client = $_POST["nom_client"];
+    $prenom_client = $_POST["prenom_client"];
+    $mail_client = $_POST["mail_client"];
+
+    $sql = "INSERT INTO Reservation (excursion_id, date_reservation, horaire, nombre_billets, mail_client_fk) VALUES (:id_excursion, :date_reservation, :horaire, :nombre_billets, :mail_client_fk)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':id_excursion', $id_excursion);
+    $stmt->bindParam(':date_reservation', $date_reservation);
+    $stmt->bindParam(':horaire', $horaire);
+    $stmt->bindParam(':nombre_billets', $nombre_billets);
+    $stmt->bindParam(':mail_client_fk', $mail_client);
+
+    $stmt->execute();
+    
+    $sql = "INSERT INTO Client (mail_client, nom_client, prenom_client) VALUES (:mail_client, :nom_client, :prenom_client)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':mail_client', $mail_client);
+    $stmt->bindParam(':nom_client', $nom_client);
+    $stmt->bindParam(':prenom_client', $prenom_client);
+   
+
+    $stmt->execute();
+
+    //  Configuration de l'e-mail pour l'utilisateur qui a réservé
+$sujet = "Confirmation de réservation DeepBlue ";
+$message = "Merci à vous, votre réservation a été confirmée. A bientôt dans l'eau ! ";
+
+//  Mail pour l'utilisateur qui a réservé
+mail($mail_client, $sujet, $message);
+}
+
+
+?>
     <script src="resaweb.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
