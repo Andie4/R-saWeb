@@ -22,7 +22,7 @@
     </nav>
       </header>
 
-      <div>
+      <div class="detail-title">
         <h3>Les terreurs des mers </h3>
         <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
         la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
