@@ -143,16 +143,7 @@ nav ul {
 
 }
 
-/* banière                              utile */
-.banniere {
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 120px);
-    margin-top: 0px;
-    background-size: cover;
-    background-position: center;
-
-}
+/* banière                          */
 
 /* titre des pages  */
 .titrePages {
@@ -168,10 +159,11 @@ section {
     color: #072A40;
 }
 
-/* .imgBanniere {
-    background-image: url("https://images.unsplash.com/photo-1508311603478-ce574376c3cf?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-position:100%;
-} */
+.imgBanniere {
+    background-image: url("https://img.freepik.com/vecteurs-libre/dessin-anime-atlantis-englouti-sous-eau-ruines-antiques-illustration-du-personnage-du-conducteur_1284-61870.jpg?t=st=1716662396~exp=1716665996~hmac=c41c1e528df30e1dcec50eef1c0fdec97240644350088de5022f5e9dd758866f&w=1380");
+    background-size: cover;
+    height: 900px;
+} 
 
 .titreBanniere {
     transform: translate(-50%, -50%);
@@ -308,6 +300,7 @@ h1 span {
 
 .apercuCatalogue {
     display: flex;
+    display: grid;
     justify-content: center;
 }
 
@@ -317,6 +310,36 @@ h1 span {
     background-color: #178CA4;
     padding-bottom: 1px;
     border-radius: 20px;
+}
+
+@media (width<=1030px){
+    .apercuCatalogue{
+        .un{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .deux{
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .trois{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .quatre{
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .cinq{
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .six{
+            grid-column: 2;
+            grid-row: 3;
+        }
+    } 
 }
 
 .imgApercu {
@@ -623,6 +646,7 @@ h1 span {
 }
 
 @media (width<=1030px){
+.catalogue{
     .un{
         grid-column: 1;
         grid-row: 1;
@@ -632,9 +656,23 @@ h1 span {
         grid-row: 1;
     }
     .trois{
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 1;
+        grid-row: 2;
     }
+    
+    .quatre{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .cinq{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .six{
+        grid-column: 2;
+        grid-row: 3;
+    }
+} 
 }
 
 .imgCatalogue {
@@ -657,6 +695,10 @@ h1 span {
     color: #178CA4;
 
 }
+.detail-image{
+    width: 40px;
+}
+
 
 .divForm{
     display: flex;
@@ -687,20 +729,25 @@ form {
     }
 }
 
-/* Il faut jouer avec les display, flex et block , et les justify content align items --> Pour mettre le formulaire sous les 3 types d'excurions du catalogue*/
+detail-title
+excursion-description
+excursion-info
+excursion-type
+excursion-price
+
 
 
 
 /* page vie marine */
 
 .vieMarine {
-   
-    justify-content: flex-start;
     font-weight: lighter;
     font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
     margin-left: 150px;
     margin-right: 150px;
 }
+
 
 .containerBandeau {
     display: flex;
