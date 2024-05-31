@@ -79,13 +79,18 @@
                 alt="" class="imgApercu">
             <h3 class="sousTitreApercu">Le monde caché</h3><br>
         </section>
+
+
     </main>
-    <div class="reserver">
+  
         <a href="excursions.php " class="lienReserver">Réserver</a>
-    </div>
+
+    
+        
+  
 
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
@@ -104,8 +109,7 @@
             <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
         </ul>
 
-        <p>&copy;2024 Caneval Andréa | Tous droits réservés</p>
-    </footer>
+    </footer> -->
 
 
 
