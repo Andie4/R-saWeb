@@ -1,3 +1,31 @@
+<?php
+// Connexion à la base de données
+$conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// fait avec : https://youtu.be/6u5D_EfKw40?si=C2q9g_qOWkdK04WI
+$allexcursion= $conn->query('SELECT * FROM Excursion ORDER BY nom_excursion DESC');
+// if(isset($_GET['s']) AND !empty($_GET['s'])){
+//   $recherche = htmlspecialchars($_GET['s']);
+//   $allexcursion = $conn->query('SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE "%'. $recherche.'%" ORDER BY nom_excursion DESC');
+// echo $allexcursion ;
+// }
+
+if(isset($_GET['s']) && !empty($_GET['s'])){
+  $recherche = htmlspecialchars($_GET['s']);
+  // Affichage de la requête pour vérification
+  // echo "Requête SQL : SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE '%$recherche%' ORDER BY nom_excursion DESC";
+  // Exécution de la requête
+  $allexcursion = $conn->query("SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE '%$recherche%' ORDER BY nom_excursion DESC");
+} else {
+  // Requête sans recherche
+  $allexcursion = $conn->query('SELECT * FROM Excursion ORDER BY nom_excursion DESC');
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -33,9 +61,23 @@
   <section class="excursions .espaceExcursions">
 
     <h1 class="titrePages ">Excursions</h1>
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Rechercher...">
-      <button id="search-bateau">Bateau</button>
+
+
+
+
+
+
+
+ <!-- Barre de recherche -->
+ <form method="GET">
+      <input type="search" name="s" placeholder="Rechercher..." autocomplete="off">
+      <input type="submit" name="envoyer" value="Rechercher">
+    </form>
+
+
+
+
+<button id="search-bateau">Bateau</button>
       <button id="search-masque">Masque et tuba</button>
       <button id="search-plongee">Plongée sous marine</button>
       <button id="clear-filter">Tout afficher</button>
@@ -43,8 +85,6 @@
       <button id="za">Z-A</button>
       <button id="croissant">↑</button>
       <button id="decroissant">↓</button>
-  </div>
-
   <div class="produit">
 
   </div>
@@ -53,10 +93,36 @@
 
     <main class="catalogue" id="catalogue">
 
+    <?php
+    $allexcursion->execute(); // Réexécutez la requête pour réinitialiser le curseur
+    if($allexcursion->rowCount() > 0){
+        while($Excursion = $allexcursion->fetch()){
+            if(isset($_GET['s']) && !empty($_GET['s']) && stripos($Excursion['nom_excursion'], $recherche) === false){
+                continue; // Si la recherche est spécifiée mais cette excursion ne correspond pas, passer à l'excursion suivante
+            }
+            ?>
+            <div class="articleCatalogue" data-price="200" data-keywords="plongee">
+                <a href="#">
+                    <img src="https://example.com/image.png" alt="" class="imgCatalogue">
+                    <h3 class="sousTitreExcursions"><?php echo $Excursion['nom_excursion']; ?></h3>
+                </a>
+            </div>
+            <?php
+        }
+    } else {
+        ?>
+        <p>Aucune excursion trouvée</p>
+        <?php
+    }
+    ?>
+
+
+
+
   <div class="articleCatalogue un" data-price="400" data-keywords="bateau"><a href="LeChampsDesPoissons.php"><img
     src="https://plus.unsplash.com/premium_photo-1682623305315-806515db9c3f?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     alt="" class="imgCatalogue">
-  <h3 class="sousTitreExcursions">Le champs des poissons</h3></a></div>
+  <h3 class="sousTitreExcursions">Le champs de poissons</h3></a></div>
 
 
   <div class="articleCatalogue deux" data-price="100" data-keywords="masque">
@@ -168,6 +234,9 @@
     </ul>
 
   </footer>
+
+
+
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
