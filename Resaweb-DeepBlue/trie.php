@@ -1,9 +1,9 @@
 <?php
 // Connexion à la base de données
 $servername = "localhost";
-$username = "caneval";
-$password = "CV2rqsrtDxWHNy5";
-$dbname = "caneval_resaweb";
+$username = "root";
+$password = "root";
+$dbname = "resawebdeepblue";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
@@ -14,10 +14,7 @@ try {
 
 
 // Trie des excursions
-$db=new PDO('mysql:host=localhost;dbname=marchandbertin_resaweb;port=3306;charset=utf8', 'marchandbertin', 'm8YNF9F5SPcxhCv');
-$requete='SELECT * FROM Charm';
-
-
+$requete='SELECT * FROM Excurion';
 
 
 if(isset ($_GET["tri"])){
@@ -25,16 +22,14 @@ $requete=$requete. " ORDER BY " .$_GET["tri"];
 }
 
 
-
-
 $stmt=$db->query($requete);
 $result=$stmt->fetchall(PDO::FETCH_ASSOC);
-foreach ($result as $Charm){
+foreach ($result as $prix){
 ?>
 
 <div class="produit">
 
-<h2> <?= $Charm["nomCharm"] ?> </h2>
+<h2> <?= $prix["prix"] ?> </h2>
 
 </div>
 
