@@ -164,7 +164,6 @@ mail($mail_client, $sujet, $message);
       <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
     </ul>
     
-        <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
       </footer>
     
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
