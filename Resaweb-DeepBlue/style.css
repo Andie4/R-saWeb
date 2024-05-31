@@ -352,19 +352,24 @@ h1 span {
     margin: 15px;
 }
 
-.reserver {
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: center;
-}
+/* .reserver {
+   
+}  */
 .lienReserver{
-   font-size: 2.4rem;
-   background-color:#0064A2;
-   color: #F9F7F0;
-   padding: 15px;
-   text-decoration: none;
-   border-radius: 10px;
+   
+ margin-top: 100px;
+    margin-bottom: 800px;
+    justify-content: center;/*  --il se met au milieu par rapport a ma case du dessus */
+    font-size: 2.4rem;
+    background-color:#0064A2;
+    color: #F9F7F0;
+    padding: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    border-radius: 10px;
 }
+
 .lienReserver :hover{
     background-color:#e7864a;
     color: #F9F7F0;
