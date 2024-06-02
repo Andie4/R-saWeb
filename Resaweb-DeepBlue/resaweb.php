@@ -60,8 +60,8 @@
         </div>
         </section>
     </div>
-
-    <main class="apercuCatalogue">
+    <section class="">
+        <main class="apercuCatalogue">
         <section class="apercuArticleCatalogue un" >
             <img src="https://plus.unsplash.com/premium_photo-1682623305315-806515db9c3f?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="" class="imgApercu">
@@ -80,17 +80,23 @@
             <h3 class="sousTitreApercu">Le monde caché</h3><br>
         </section>
 
-
     </main>
+
+    <main class="container-lien">
+    <a href="excursions.php " class="lienReserver">En savoir plus</a>
+    </main>
+
+    </section>
+
+    
   
-        <a href="excursions.php " class="lienReserver">Réserver</a>
+        
 
     
         
   
 
-
-    <!-- <footer class="footer">
+<footer class="footer">
         <div class="waves">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
@@ -109,7 +115,7 @@
             <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
         </ul>
 
-    </footer> -->
+    </footer>
 
 
 
