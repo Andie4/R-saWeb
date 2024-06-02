@@ -352,20 +352,17 @@ h1 span {
     margin: 15px;
 }
 
-/* .reserver {
-   
-}  */
+.container-lien{
+    display: flex;
+    justify-content: center;
+}
 .lienReserver{
    
- margin-top: 100px;
-    margin-bottom: 800px;
-    justify-content: center;/*  --il se met au milieu par rapport a ma case du dessus */
-    font-size: 2.4rem;
+    margin-top: 50px;
+    font-size: 1.5rem;
     background-color:#0064A2;
     color: #F9F7F0;
     padding: 15px;
-    padding-left: 8px;
-    padding-right: 8px;
     text-decoration: none;
     border-radius: 10px;
 }
@@ -708,14 +705,59 @@ h1 span {
 .divForm{
     display: flex;
     justify-content: center;
+    margin-bottom: 300px;
+    position: relative;
+    
+
 } 
 form {
-    background-color: #178CA4;
+    /* background-color: #178CA4;
     padding: 30px;
-    /* border-radius: 10px; */
     width: fit-content;
     color: #F9F7F0;
-    
+    margin-bottom: 200px;
+    margin-top: 300px; */
+    width: 360px;
+    height: 400px;
+    margin: 10px;
+    background:#178CA4 ;
+    border-radius: 20px ;
+    padding: 30px;
+    position: relative;
+}
+form input{
+    width: 280px;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color: #ffffff;   
+}
+
+.btn-box{
+    width: 100px;
+    margin: 50px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: auto;
+    background: linear-gradient(to right, #e7cd4a, #18b7be);
+    border-radius: 30px;
+    border:0;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.soustitre-form{
+    margin-left: 10px;
+    color: #e7cd4a;
 }
 
 .rectangle{
@@ -726,6 +768,7 @@ form {
     justify-content: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    color: #ffffff;
 }
 @media (width<=779px){
     .rectangle{
@@ -734,14 +777,37 @@ form {
     }
 }
 
-detail-title
-excursion-description
-excursion-info
-excursion-type
-excursion-price
+.rsv-form{
+    margin-top: 50px;
+    font-size: 1.5rem;
+    background-color:#0064A2;
+    color: #F9F7F0;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
 
+.rsv-form :hover{
+    background-color:#e7864a;
+    color: #F9F7F0;
+}
 
+#form1, #form2, #form3 {
+    display: none;
+}
 
+#form1.active, #form2.active, #form3.active {
+    display: block;
+}
+.step-row{
+    width: 360px;
+    height: 40px;
+    margin:0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+}
 
 /* page vie marine */
 
