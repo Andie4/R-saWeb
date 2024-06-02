@@ -110,3 +110,20 @@ dots.forEach((element, index) => {
 
 document.querySelector('.slideRight').addEventListener('click', DecaleGauche);
 document.querySelector('.slideLeft').addEventListener('click', DecaleDroite);
+
+
+// Pour masquer et afficher les pages du formulaires
+function showNextForm(formNumber) {
+    document.querySelectorAll('form').forEach(form => form.classList.remove('active'));
+    document.getElementById('form' + formNumber).classList.add('active');
+}
+
+function showPreviousForm(formNumber) {
+    document.querySelectorAll('form').forEach(form => form.classList.remove('active'));
+    document.getElementById('form' + formNumber).classList.add('active');
+}
+
+// Affichez le premier formulaire lors du chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form1').classList.add('active');
+});
