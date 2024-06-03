@@ -108,22 +108,31 @@ dots.forEach((element, index) => {
     });
 });
 
-document.querySelector('.slideRight').addEventListener('click', DecaleGauche);
-document.querySelector('.slideLeft').addEventListener('click', DecaleDroite);
-
-
 // Pour masquer et afficher les pages du formulaires
-function showNextForm(formNumber) {
-    document.querySelectorAll('form').forEach(form => form.classList.remove('active'));
-    document.getElementById('form' + formNumber).classList.add('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const progressBar = document.getElementById('progress-bar');
+    const totalSteps = 3;
 
-function showPreviousForm(formNumber) {
-    document.querySelectorAll('form').forEach(form => form.classList.remove('active'));
-    document.getElementById('form' + formNumber).classList.add('active');
-}
+    function updateProgressBar(step) {
+        const progressPercentage = (step / totalSteps) * 100;
+        progressBar.style.width = progressPercentage + '%';
+    }
 
-// Affichez le premier formulaire lors du chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('form1').classList.add('active');
+    function showNextForm(nextFormId) {
+        document.querySelector('.custom-photo.active').classList.remove('active');
+        document.getElementById('form' + nextFormId + '-container').classList.add('active');
+        updateProgressBar(nextFormId);
+    }
+
+    function showPreviousForm(previousFormId) {
+        document.querySelector('.custom-photo.active').classList.remove('active');
+        document.getElementById('form' + previousFormId + '-container').classList.add('active');
+        updateProgressBar(previousFormId);
+    }
+
+    window.showNextForm = showNextForm;
+    window.showPreviousForm = showPreviousForm;
+
+    // Barre de progression
+    updateProgressBar(1);
 });
