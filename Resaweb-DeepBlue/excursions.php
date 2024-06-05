@@ -3,24 +3,37 @@
 $conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// fait avec : https://youtu.be/6u5D_EfKw40?si=C2q9g_qOWkdK04WI
-$allexcursion= $conn->query('SELECT * FROM Excursion ORDER BY nom_excursion DESC');
-// if(isset($_GET['s']) AND !empty($_GET['s'])){
-//   $recherche = htmlspecialchars($_GET['s']);
-//   $allexcursion = $conn->query('SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE "%'. $recherche.'%" ORDER BY nom_excursion DESC');
-// echo $allexcursion ;
-// }
-
+//recherche
 if(isset($_GET['s']) && !empty($_GET['s'])){
-  $recherche = htmlspecialchars($_GET['s']);
-  // Affichage de la requête pour vérification
-  // echo "Requête SQL : SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE '%$recherche%' ORDER BY nom_excursion DESC";
+  $recherche = htmlspecialchars($_GET['s']); //vérification que 's' pour search n'est pas vide pour donner sa valeur à la recherche donc '$recherche'
   // Exécution de la requête
-  $allexcursion = $conn->query("SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE '%$recherche%' ORDER BY nom_excursion DESC");
+  $allexcursion = $conn->query("SELECT nom_excursion FROM Excursion WHERE nom_excursion LIKE '%$recherche%' ORDER BY nom_excursion DESC"); //affiche les noms des excursions correspondants à la rcherche. Le DESC range les résultats par odre décroissant.
 } else {
   // Requête sans recherche
-  $allexcursion = $conn->query('SELECT * FROM Excursion ORDER BY nom_excursion DESC');
+  $allexcursion = $conn->query('SELECT * FROM Excursion ORDER BY nom_excursion DESC'); // Si il n'y a pas de valeur de recherche alors toutes les excursions sont affichés d'où l'étoile qui veut dire affiche moi tout les éléments de la table Excursion.
 }
+
+$sql = 'SELECT * FROM Excursion ';
+
+// trie 
+if(isset($_GET["tri"])){
+  $sql .= "ORDER BY " . $_GET["tri"];
+  if(isset($_GET["order"]) && $_GET["order"] == "desc"){
+      $sql .= " DESC";  // les excursions sont rangée paar ordre alphabétique du nom ou ordre croissant du prix qui leur correspond ( et aussi par ordre décroissant et alphabétique inversé)
+  }
+}
+
+// filtre
+if(isset($_GET['filtre']) && !empty($_GET['filtre'])){
+  $filtre = htmlspecialchars($_GET['filtre']); //vérification que 'filtre' n'est pas vide
+  // Utilisation du filtre dans la requête SQL
+  $sql = "SELECT * FROM Excursion WHERE genre_excursion LIKE '%$filtre%'";  // les excursions sont rangée en fonction de leur genre
+}
+
+
+// Exécution de la requête
+$allexcursion = $conn->query($sql);
+
 
 
 ?>
@@ -62,62 +75,58 @@ if(isset($_GET['s']) && !empty($_GET['s'])){
 
     <h1 class="titrePages ">Excursions</h1>
 
-
-
-
-
-
-
  <!-- Barre de recherche -->
- <form method="GET">
+  <form method="GET">
       <input type="search" name="s" placeholder="Rechercher..." autocomplete="off">
     </form>
 
 
 
-
-<button id="search-bateau">Bateau</button>
-      <button id="search-masque">Masque et tuba</button>
-      <button id="search-plongee">Plongée sous marine</button>
-      <button id="clear-filter">Tout afficher</button>
-      <button id="az">A-Z></button>
-      <button id="za">Z-A</button>
-      <button id="croissant">↑</button>
-      <button id="decroissant">↓</button>
-  <div class="produit">
+    
+<span>
+      <p>Filtrer par genre : 
+      <!-- Boutons de filtre -->
+          <a href="excursions.php?filtre=bateau" class="trie-filtre">Bateau</a>
+          <a href="excursions.php?filtre=Masque et tuba" class="trie-filtre">Masque et tuba</a>
+          <a href="excursions.php?filtre=Plongée sous-marine" class="trie-filtre">Plongée sous marine</a>
+          <a href="excursions.php" class="trie-filtre">Tout voir</a>
+      </p>
+</span>
+    
+    
+      <a href="excursions.php?tri=nom_excursion" id="A-Z" class="trie-filtre">A-Z</a>
+      <a href="excursions.php?tri=nom_excursion&order=desc" id="Z-A" class="trie-filtre">Z-A</a>
+      <a href="excursions.php?tri=prix_excursion" id="croissant" class="trie-filtre">Croissant</a>
+      <a href="excursions.php?tri=prix_excursion&order=desc" id="decroissant" class="trie-filtre">Décroissant</a>
 
   </div>
      
 
 
-    <main class="catalogue" id="catalogue">
-
-    <?php
-    $allexcursion->execute(); // Réexécutez la requête pour réinitialiser le curseur
-    if($allexcursion->rowCount() > 0){
-        while($Excursion = $allexcursion->fetch()){
-            if(isset($_GET['s']) && !empty($_GET['s']) && stripos($Excursion['nom_excursion'], $recherche) === false){
-                continue; // Si la recherche est spécifiée mais cette excursion ne correspond pas, passer à l'excursion suivante
+  <main class="catalogue" id="catalogue">
+            <?php
+            if ($allexcursion->rowCount() > 0) {
+                while ($Excursion = $allexcursion->fetch()) {
+                    if (isset($_GET['s']) && !empty($_GET['s']) && stripos($Excursion['nom_excursion'], $recherche) === false) {
+                        continue; // Si la recherche est spécifiée mais si cette excursion ne correspond pas, passer à l'excursion suivante
+                    }
+                    $genreClass = strtolower(str_replace(' ', '-', $Excursion['genre_excursion']));
+                    ?>
+                    <div class="articleCatalogue box <?= $genreClass ?> show">
+                        <a href="#">
+                            <img src="<?= $Excursion['chemin_image'] ?>" alt="" class="imgCatalogue">
+                            <h3 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h3>
+                        </a>
+                    </div>
+                    <?php
+                }
+            } else {
+                ?>
+                <p>Aucune excursion trouvée</p>
+                <?php
             }
             ?>
-            <div class="articleCatalogue">
-                <a href="#">
-                    <img src="https://example.com/image.png" alt="" class="imgCatalogue">
-                    <h3 class="sousTitreExcursions"><?php echo $Excursion['nom_excursion']; ?></h3>
-                </a>
-            </div>
-            <?php
-        }
-    } else {
-        ?>
-        <p>Aucune excursion trouvée</p>
-        <?php
-    }
-    ?>
-
-  
-    
-    </main>
+        </main>
    
     <section class="FAQ">
       <div class="step2">
@@ -195,8 +204,6 @@ if(isset($_GET['s']) && !empty($_GET['s'])){
     </ul>
 
   </footer>
-
-
 
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
