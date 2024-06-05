@@ -106,21 +106,21 @@ $allexcursion = $conn->query($sql);
   <main class="catalogue" id="catalogue">
             <?php
             if ($allexcursion->rowCount() > 0) {
-                while ($Excursion = $allexcursion->fetch()) {
-                    if (isset($_GET['s']) && !empty($_GET['s']) && stripos($Excursion['nom_excursion'], $recherche) === false) {
-                        continue; // Si la recherche est spécifiée mais si cette excursion ne correspond pas, passer à l'excursion suivante
-                    }
-                    $genreClass = strtolower(str_replace(' ', '-', $Excursion['genre_excursion']));
-                    ?>
-                    <div class="articleCatalogue box <?= $genreClass ?> show">
-                        <a href="#">
-                            <img src="<?= $Excursion['chemin_image'] ?>" alt="" class="imgCatalogue">
-                            <h3 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h3>
-                        </a>
-                    </div>
-                    <?php
-                }
-            } else {
+              while ($Excursion = $allexcursion->fetch()) {
+                  if (isset($_GET['s']) && !empty($_GET['s']) && stripos($Excursion['nom_excursion'], $recherche) === false) {
+                      continue; // Si la recherche est spécifiée mais si cette excursion ne correspond pas, passer à l'excursion suivante
+                  }
+                  $genreClass = strtolower(str_replace(' ', '-', $Excursion['genre_excursion']));
+          ?>
+                  <div class="articleCatalogue box <?= $genreClass ?> show">
+                      <a href="<?= $Excursion['url_excursion']; ?>">
+                          <img src="<?= $Excursion['chemin_image'] ?>" alt="" class="imgCatalogue">
+                          <h3 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h3>
+                      </a>
+                  </div>
+          <?php
+              }
+          } else {
                 ?>
                 <p>Aucune excursion trouvée</p>
                 <?php
