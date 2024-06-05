@@ -724,7 +724,7 @@ h1 span {
 
 .custom-progress-bar {
     height: 30px;
-    background-color: #4CAF50;
+    background-color: #178CA4;;
     width: 0;
     transition: width 0.3s ease;
 }
@@ -784,13 +784,30 @@ button {
 button:hover {
     background-color: #072A40;
 }
+.trie-filtre{
+    padding: 10px 20px;
+    background-color: #18B7BE;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    
 
+}
+.trie-filtre :hover{
+    background-color: #072A40;
+}
 .loader {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 }
+
 
 /* page vie marine */
 
