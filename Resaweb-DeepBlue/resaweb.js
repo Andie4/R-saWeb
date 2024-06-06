@@ -1,8 +1,4 @@
-// Page load event for loader animation
-window.addEventListener('load', () => {
-    document.querySelector('.loader').classList.add('fondu-out');
-});
-
+// page notre histoire
 // Slider and other functionalities remain the same
 var position = 1;
 
@@ -60,31 +56,6 @@ dots.forEach((element, index) => {
     });
 });
 
-// Pour masquer et afficher les pages du formulaires
-document.addEventListener("DOMContentLoaded", function () {
-    const progressBar = document.getElementById('progress-bar');
-    const totalSteps = 3;
 
-    function updateProgressBar(step) {
-        const progressPercentage = (step / totalSteps) * 100;
-        progressBar.style.width = progressPercentage + '%';
-    }
 
-    function showNextForm(nextFormId) {
-        document.querySelector('.custom-photo.active').classList.remove('active');
-        document.getElementById('form' + nextFormId + '-container').classList.add('active');
-        updateProgressBar(nextFormId);
-    }
 
-    function showPreviousForm(previousFormId) {
-        document.querySelector('.custom-photo.active').classList.remove('active');
-        document.getElementById('form' + previousFormId + '-container').classList.add('active');
-        updateProgressBar(previousFormId);
-    }
-
-    window.showNextForm = showNextForm;
-    window.showPreviousForm = showPreviousForm;
-
-    // Barre de progression
-    updateProgressBar(1);
-});
