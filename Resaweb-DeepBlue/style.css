@@ -729,38 +729,6 @@ h1 span {
     transition: width 0.3s ease;
 }
 
-.custom-slider {
-    position: relative;
-    width: 500px;
-    height: auto;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.custom-photos {
-    position: relative;
-    display: flex;
-    width: 100%;
-    transition: left 0.3s ease;
-}
-
-.custom-photo {
-    flex-shrink: 0;
-    position: relative;
-    width: 500px;
-    padding-bottom: 50px;
-    display: none;
-    color: #333; /* Couleur du texte */
-}
-
-.custom-photo.active {
-    display: block;
-}
-
-.custom-title, .custom-subtitle {
-    color: #333;
-    text-align: center;
-}
 
 input, select {
     width: calc(100% - 20px);
