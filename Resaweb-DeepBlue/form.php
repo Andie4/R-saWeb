@@ -10,7 +10,6 @@
     <div class="container espacePageAcceuil"></div>
 
     <header>
-
         <nav>
           <a href="resaweb.php" class="logo">ESM</a>
           <ul class="navbar">
@@ -22,25 +21,17 @@
         </nav>
       </header>
 
-
     <section>
-
-
-    <?php 
+    <?php
 // Connexion à la base de données
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "resawebdeepblue";
 
-// $servername = "localhost";
-// $username = "caneval";
-// $password = "CV2rqsrtDxWHNy5";
-// $dbname = "caneval_resaweb";
-
 try {
     $conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-    
+
     // $conn = new PDO('mysql:host=localhost;dbname=caneval_resaweb', 'caneval', 'CV2rqsrtDxWHNy5', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -67,46 +58,27 @@ if(isset($_POST['valider'])) {
     $stmt->bindParam(':mail_client_fk', $mail_client);
 
     $stmt->execute();
-    
+
     $sql = "INSERT INTO Client (mail_client, nom_client, prenom_client) VALUES (:mail_client, :nom_client, :prenom_client)";
     $stmt = $conn->prepare($sql);
 
     $stmt->bindParam(':mail_client', $mail_client);
     $stmt->bindParam(':nom_client', $nom_client);
     $stmt->bindParam(':prenom_client', $prenom_client);
-   
+
 
     $stmt->execute();
 
-    //  Configuration de l'e-mail pour l'utilisateur qui a réservé
+        //  Configuration de l'e-mail pour l'utilisateur qui a réservé
 $sujet = "Confirmation de réservation DeepBlue ";
-$message = "
-      <html>
-        <head>
-            <title>Confirmation de réservation</title>
-        </head>  
+$message = "Merci à vous, votre réservation a été confirmée. A bientôt dans l'eau ! ";
 
-        <body>
-          <p>Bonjour $nom_client $prenom_client, </p>
-          <p>Les détails de votre réservation : 1</p> 
-        <ul>
-            <li>Activité : $id_excursion</li>
-            <1i>Date : $date_reservation</1i>
-            <1i>Horaire : $horaire</11>
-            <1i>Horaire : $nombre_billets</11>
-            
-        </ul>
-          <p>Merci et à bientôt dans l'eau !</p>
-        </body>
-      </html>";
-
-//  Mail pour l'utilisateur qui a réservé
-mail($mail_client, $sujet, $message);
+    // Envoi de l'email
+    mail($mail_client, $sujet, $message);
 }
-
-
 ?>
- <div class="loader">
+
+    <div class="loader">
         <div class="custom-form-container">
             <div class="custom-progress-container">
                 <div class="custom-progress-bar" id="progress-bar"></div>
@@ -119,21 +91,11 @@ mail($mail_client, $sujet, $message);
                             <h3 class="custom-subtitle">Profil</h3>
                             <label for="nom">Nom :</label>
                             <input type="text" id="nom" name="nom_client" placeholder="Votre nom" required><br>
-                            
                             <label for="prenom">Prénom :</label>
                             <input type="text" id="prenom" name="prenom_client" placeholder="Votre prénom" required><br> 
-            
                             <label for="email">Email :</label>
                             <input type="email" id="email" name="mail_client" placeholder="Votre email" required><br>
-            
-                            <div class="custom-btn-box">
-                                <button type="button" onclick="showNextForm(2)">Suivant</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="custom-photo image" id="form2-container">
-                        <form method="post" action="form.php" enctype="multipart/form-data" id="form2">
-                            <h2 class="custom-title">Deep Blue</h2>
+
                             <h3 class="custom-subtitle">Excursion</h3>
                             <label for="Excursion">Type d'excursion :</label>
                             <select id="Excursion" name="id_excursion">
@@ -147,10 +109,8 @@ mail($mail_client, $sujet, $message);
                                     <option value="6">Exploration d'épaves</option>
                                 </optgroup>
                             </select><br>
-            
                             <label for="jour">Jour :</label>
                             <input type="date" id="jour" name="date_reservation" required><br>
-            
                             <label for="Horaire">Horaire :</label>
                             <select id="Horaire" name="horaire">
                                 <optgroup label="Horaires">
@@ -161,26 +121,13 @@ mail($mail_client, $sujet, $message);
                                     <option value="15">15h -17h</option>
                                 </optgroup>
                             </select><br>
-            
                             <label for="nombre">Nombre de billets :</label>
                             <input type="number" id="nombre" name="nombre_billets" min="1" max="10" required><br>
-            
                             <div class="custom-btn-box">
-                                <button type="button" onclick="showPreviousForm(1)">Retour</button>
                                 <button type="submit" name="valider">Valider</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="custom-photo image" id="form3-container">
-                        <form method="post" action="form.php" enctype="multipart/form-data" id="form3">
-                            <h2 class="custom-title">Deep Blue</h2>
-                            <p>Votre réservation a été envoyée par mail.</p><br>
-                            <h3 class="custom-subtitle">Merci et à bientôt dans l’eau !</h3>
-                            
-                            <div class="custom-btn-box">
-                               
-                            </div>
-                        </form>
+                    
                     </div>
                 </div>
             </div>
