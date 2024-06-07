@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">    
+    <title>Deep Blue</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="images/meduse.png">   
 </head>
 <body>
     <div class="container espacePageAcceuil"></div>
@@ -24,7 +25,7 @@
     <section>
 
     <div>
-        <h3>Les oiseaux aquatiques</h3>
+        <h3>Exploration d'épaves</h3>
         <p class="texteExcursions">Cette excursion vas vous permettre de voir les différents poissons présents près de
         la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçant
         de façons coordonné.
