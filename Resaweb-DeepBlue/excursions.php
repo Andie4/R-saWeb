@@ -50,6 +50,7 @@ $allexcursion = $conn->query($sql);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/meduse.png">
 </head>
 
 <body>
@@ -112,7 +113,7 @@ $allexcursion = $conn->query($sql);
                   }
                   $genreClass = strtolower(str_replace(' ', '-', $Excursion['genre_excursion']));
           ?>
-                  <div class="articleCatalogue box <?= $genreClass ?> show">
+                  <div class="articleCatalogue <?= $genreClass ?>">
                       <a href="<?= $Excursion['url_excursion']; ?>">
                           <img src="<?= $Excursion['chemin_image'] ?>" alt="" class="imgCatalogue">
                           <h3 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h3>
