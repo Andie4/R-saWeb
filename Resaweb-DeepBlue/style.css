@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
-.paletteCouleurAsupprimer {
-    color: #F9F7F0;
-    color: #18B7BE;
-    color: #178CA4;
-    color: #072A40;
-}
 
+:root {
+    --color1: #F9F7F0;
+    --color2: #18B7BE;
+    --color3: #178CA4;
+    --color4: #072A40;
+    --color5: #0064A2;
+    --color6: #e7864a;
+    --color7: #3586ff;
+    --color8: #ffff;
+    --color9: #000000;
+}
 
 /* a11y */
 .sr-only {
@@ -32,12 +37,11 @@ body {
     padding: 0px;
     scroll-behavior: smooth;
     height: 100vh;
-    background-color: #F9F7F0;
+    background-color: var(--color1);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 551;
     font-style: normal;
-    color: #072A40;
 
 }
 
@@ -50,7 +54,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     transition: 0;
-    background-color: #178CA4;
+    background-color: var(--color3);
 }
 
 nav {
@@ -70,17 +74,18 @@ nav {
 
 
 .logo {
-    color: rgb(255, 255, 255);
+    color: var(--color8);
     /* background-color: blue; */
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
     margin-right: 30px;
+    
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: var(--color8);
 }
 
 nav ul {
@@ -92,7 +97,7 @@ nav ul {
 }
 
 .navbar li {
-    color: rgb(255, 255, 255);
+    color: var(--color8);
     text-decoration: none;
     font-weight: 600;
     flex-direction: row;
@@ -101,7 +106,7 @@ nav ul {
     /* background-color: blueviolet; */
     /* margin: ; */
 }
-@media (width<=768px) {
+@media (width<=760px) {
     nav {
         margin: auto;
         height: -webkit-fit-content;
@@ -117,7 +122,7 @@ nav ul {
     
     
     .logo {
-        color: rgb(255, 255, 255);
+        color: var(--color8);
         /* background-color: blue; */
         font-weight: bold;
         font-size: 2rem;
@@ -126,7 +131,9 @@ nav ul {
     
     .navbar a {
         text-decoration: none;
-        color: white;
+        color: var(--color8);
+        font-size: 2rem;
+        text-decoration: solid;
     }
     
     nav ul {
@@ -139,24 +146,23 @@ nav ul {
 .navbar li a:hover {
     border-bottom: 3px solid;
     /* color: rgb(0, 119, 255); */
-    color: #e7864a;
+    color:var(--color6);
 
 }
 
-/* banière                          */
 
 /* titre des pages  */
 .titrePages {
     font-size: 3rem;
     margin-top: -52px;
     padding-top: 10px;
-    color: #178CA4;
+    color: var(--color3);
 }
 
 section {
     margin-top: 150px;
     padding-bottom: 150px;
-    color: #072A40;
+    color: var(--color4);
 }
 
 .imgBanniere {
@@ -173,7 +179,7 @@ section {
     color: transparent;
     /* Rendre le texte transparent */
     -webkit-text-stroke-width: 8px;
-    -webkit-text-stroke-color: rgb(224, 218, 218);
+    -webkit-text-stroke-color: var(--color8);
     letter-spacing: 4px;
     display: block;
 
@@ -191,7 +197,7 @@ section {
     justify-content: space-between;
     padding: 2%;
     padding-top: 4%;
-    color: white;
+    color: var(--color8);
     clear: both;
 
 }
@@ -224,20 +230,20 @@ h1 span {
 
 .sousTitre2 {
     font-size: 2rem;
-    color: #072A40;
+    color: var(--color4);
 }
 
 .contourBleu {
     color: transparent;
     /* Rendre le texte transparent */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F9F7F0;
-    background-color: #178CA4;
+    -webkit-text-stroke-color:var(--color1);
+    background-color: var(--color3);
     width: fit-content;
 }
 
 .policeBleu {
-    color: #072A40;
+    color: var(--color4);
 
 }
 
@@ -261,42 +267,29 @@ h1 span {
 
 .onglet {
     display: inline-block;
-    width: 200px;
-    /* Ajustez la largeur selon vos besoins */
-    margin-right: 20px;
-    /* Espace entre les onglets */
+    width: 200px;    margin-right: 20px;
     text-align: center;
-    /* Pour centrer le contenu */
 }
 
 .onglet img {
     width: 100%;
     height: auto;
-    /* Pour conserver les proportions de l'image */
-    border: 1px solid #ccc;
-    /* Optionnel : bordure autour de l'image */
+    border: 1px solid ;
     border-radius: 5px;
-    color: red;
-    border-radius: red;
-    /* Optionnel : coins arrondis */
+    
 }
 
 .onglet p {
-    margin-top: 5px;
-    /* Espace entre l'image et le texte */
-}
+    margin-top: 5px;}
 
 .espaceVieMarine .espaceApropos .espaceExcursions .espaceNotreHistoire {
     /* padding-bottom: 30%; */
-    color: #072A40;
+    color: var(--color4);
     font-weight: lighter;
     font-size: 1.2rem;
 
 }
 
-/* .apercu{
-
-} */
 
 .apercuCatalogue {
     display: flex;
@@ -307,7 +300,7 @@ h1 span {
 .apercuArticleCatalogue {
     
     margin: 10px;
-    background-color: #178CA4;
+    background-color:  var(--color3);
     padding-bottom: 1px;
     border-radius: 20px;
 }
@@ -360,16 +353,16 @@ h1 span {
    
     margin-top: 50px;
     font-size: 1.5rem;
-    background-color:#0064A2;
-    color: #F9F7F0;
+    background-color:var(--color5);
+    color: var(--color1);
     padding: 15px;
     text-decoration: none;
     border-radius: 10px;
 }
 
-.lienReserver :hover{
-    background-color:#e7864a;
-    color: #F9F7F0;
+.lienReserver:hover{
+    background-color:var(--color6);
+    color: var(--color1);
     
  }
 /* page notre histoire */
@@ -415,8 +408,12 @@ h1 span {
 
 .paragrapheGras {
     font-weight: bold;
-    color: #18b7be;
+    color: var(--color5);
 }
+.gras{
+    font-weight: bold;
+}
+
 
 .paragraphe2 {
     margin-top: 80px;
@@ -548,7 +545,7 @@ h1 span {
 .dots {
     height: 25px;
     width: 25px;
-    background-color: #000000;
+    background-color: var(--color9);
     border-radius: 50%;
     display: inline-block;
     margin-right: 20px;
@@ -556,11 +553,11 @@ h1 span {
     top: 200px;
     right: 350px;
     cursor: pointer;
-    border: solid 1px black;
+    border: solid 1px var(--color9);
 }
 
 .dots1 {
-    background-color: white;
+    background-color: var(--color8);
 }
 
 .js-navigation {
@@ -580,7 +577,7 @@ h1 span {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -619,7 +616,7 @@ h1 span {
     /* height: 70vh;change la longeur de la boite ici en bleu */
     width: 40vh;
     margin: 10px;
-    background-color: #0064A2;
+    background-color: var(--color5);
     border-radius: 15px;
     padding-bottom: 0px;
     
@@ -647,7 +644,7 @@ h1 span {
     grid-row: 1;
 }
 
-@media (width<=1030px){
+/* @media (width<=1030px){
 .catalogue{
     .un{
         grid-column: 1;
@@ -675,7 +672,7 @@ h1 span {
         grid-row: 3;
     }
 } 
-}
+} */
 
 .imgCatalogue {
     height: 30vh;
@@ -687,46 +684,73 @@ h1 span {
 .sousTitreExcursions {
     padding: 8px;
     /* color: #F9F7F0; */
-    color: #18b7be;
+    color: var(--color2);
     /* text-decoration: none; */
 }
 
 .texteExcursions {
     padding: 10px;
     justify-content: center;
-    color: #178CA4;
+    color: var(--color3);
 
 }
 .detail-image{
     width: 40px;
 }
 
+
+/* apparence des diff&rentes excursions */
+.apparence{
+    font-weight: lighter;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.excursion-description{
+    color: var(--color4);
+}
+
+.rsv-form{
+    padding: 10px 20px;
+    background-color: var(--color4);;
+    color: var(--color8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 5px;
+    text-decoration: none;
+}
+
+.rsv-form:hover{
+    background-color: var(--color6);
+    color: var(--color9);
+}
+.detail-title{
+    color: #072A40;
+}
 /* formulaire */
 .custom-form-container {
     width: 520px;
     padding: 20px;
-    background-color: #e0f7fa; /* Couleur de fond bleu */
+    background-color: var(--color3); /* Couleur de fond bleu */
     border-radius: 10px;
     margin: 50px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--color9);
     position: relative;
     color: #333; /* Couleur du texte */
-}
+    display: block;
+    justify-content: center;
 
-.custom-progress-container {
-    width: 100%;
-    background-color: #f3f3f3;
-    height: 30px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    overflow: hidden;
 }
+.custom-title{
 
-.custom-progress-bar {
-    height: 30px;
-    background-color: #178CA4;;
-    width: 0;
-    transition: width 0.3s ease;
+    align-items: center;
+    color:var(--color8);
+}
+.custom-subtitle{
+    color: var(--color8)
 }
 
 
@@ -734,14 +758,14 @@ input, select {
     width: calc(100% - 20px);
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color1);
     border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #18B7BE;;
-    color: white;
+    background-color: var(--color4);;
+    color: var(--color8);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -750,12 +774,13 @@ button {
 }
 
 button:hover {
-    background-color: #072A40;
+    background-color: var(--color1);
+    color: var(--color4);
 }
 .trie-filtre{
     padding: 10px 20px;
-    background-color: #18B7BE;;
-    color: white;
+    background-color: var(--color2);;
+    color: var(--color8);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -766,17 +791,26 @@ button:hover {
     
 
 }
-.trie-filtre :hover{
-    background-color: #072A40;
+.trie-filtre:hover{
+    background-color: var(--color6);
 }
 .loader {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 }
-
-
+.obligatoire{
+    color: rgb(232, 155, 78);
+}
+.message{
+    display: flex;
+    justify-content: center;
+}
+.confirmation-message{
+    margin: auto;
+    font-size: 1.5rem;
+}
 /* page vie marine */
 
 .vieMarine {
@@ -788,26 +822,8 @@ button:hover {
 }
 
 
-.containerBandeau {
-    display: flex;
-    justify-content: center;
-}
-
-
-.bandeau {
-    margin-top: 30px;
-    height: 10vh;
-    width: 30vh;
-    margin-bottom: 30px;
-}
-
-@media (width<=1250px){
-    .bandeau {
-        height: 0px;
-    }
-}
 .paragraphe {
-    color: #072A40;
+    color: var(--color4);
     align-items: center;
     font-weight: lighter;
     margin-left: 80px;
@@ -815,7 +831,7 @@ button:hover {
 }
 
 .paragrapheCentrer {
-    color: #072A40;
+    color: var(--color4);
     align-items: center;
     margin-left: 150px;
     margin-right: 150px;
@@ -824,7 +840,7 @@ button:hover {
 }
 @media (width<=779px){
     .paragrapheCentrer {
-        color: #072A40;
+        color: var(--color4);
         font-weight: bold;
     
     }
@@ -833,24 +849,24 @@ button:hover {
 
 
 .couleurSousTitreVieMarine {
-    color: #18b7be;
+    color: var(--color3);
 }
 
 .conclusionVieMarine {
-    color: #F9F7F0;
+    color: var(--color1);
     align-items: center;
     
     font-weight: bolder;
-    background-color: #18b7be;
+    background-color: var(--color2);
     padding: 50px;
     border-radius: 80px 10px;
     min-width: 200px;
 }
 @media (width<=779px){
     .conclusionVieMarine {
-        color: #F9F7F0;
+        color: var(--color1);
         font-weight: bolder;
-        background-color: #18b7be;
+        background-color:var(--color2);
         padding: 50px;
         border-radius: 80px 10px;
     }
@@ -858,7 +874,7 @@ button:hover {
 
 /* A propos*/
 .aPropos {
-    color: #18b7be;
+    color: var(--color2);
     align-items: center;
     font-weight: lighter;
     font-size: 1.2rem;
@@ -870,13 +886,15 @@ button:hover {
     background-color: rgba(255, 189, 104, 0.639)
 }
 
-
+.titresParagraphes{
+    color: var(--color3);
+}
 
 summary {
     position: relative;
-    background-color: #18b7be;
+    background-color: var(--color6);
     border-radius: 10px;
-    color: white;
+    color: var(--color8);
 }
 
 summary::marker {
@@ -906,7 +924,7 @@ summary::after {
 
 [open] summary::after {
     transform: rotate(0deg);
-    color: white;
+    color: var(--color6);
 
 }
 
@@ -922,7 +940,7 @@ summary::after {
 
 details {
     border: 1px solid;
-    /* background-color: white; */
+    background-color: var(--color6);
     padding-top: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 0.8rem;
@@ -959,16 +977,15 @@ summary {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin: 0;
+    
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
 .footer {
     position: relative;
     width: 100%;
-    background: #3586ff;
+    background: var(--color7);
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -995,7 +1012,7 @@ summary {
 
 .social-icon__link {
     font-size: 2rem;
-    color: #fff;
+    color: var(--color8);
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
@@ -1007,7 +1024,7 @@ summary {
 
 .menu__link {
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--color8);
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
@@ -1021,7 +1038,7 @@ summary {
 }
 
 .footer p {
-    color: #fff;
+    color: var(--color8);
     margin: 15px 0 10px 0;
     font-size: 1rem;
     font-weight: 300;
@@ -1043,7 +1060,7 @@ summary {
     opacity: 1;
     bottom: 0;
     animation: animateWaves 4s linear infinite;
-    color: #0064A2;
+    color: var(--color5);
 }
 
 .wave#wave2 {
