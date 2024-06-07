@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Deep Blue</title>
     <link rel="stylesheet" href="style.css">    
+    <link rel="icon" href="images/meduse.png">
 </head>
 <body>
     <div class="container espacePageAcceuil"></div>
 
     <header>
         <nav>
-          <a href="resaweb.php" class="logo">ESM</a>
+          <a href="resaweb.php" class="logo" aria-describedby="menu">ESM</a>
           <ul class="navbar">
-            <li><a href="notreHistoire.php">Notre histoire</a></li>
+            <li><a href="notreHistoire.php" aria-labelledby="page notre histoire">Notre histoire</a></li>
             <li><a href="excursions.php">Excursions</a></li>
             <li><a href="vieMarine.php">Vie marine</a></li>
             <li><a href="aPropos.php">A propos</a></li>
@@ -31,15 +32,15 @@ $dbname = "resawebdeepblue";
 
 try {
     $conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-
-    // $conn = new PDO('mysql:host=localhost;dbname=caneval_resaweb', 'caneval', 'CV2rqsrtDxWHNy5', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
     echo "La connexion a échoué : " . $e->getMessage();
 }
 
-if(isset($_POST['valider'])) {
+// Variable pour stocker le message de confirmation
+$confirmationMessage = "";
+
+if (isset($_POST['valider'])) {
     $id_excursion = $_POST["id_excursion"];
     $date_reservation = $_POST["date_reservation"];
     $horaire = $_POST["horaire"];
@@ -48,59 +49,73 @@ if(isset($_POST['valider'])) {
     $prenom_client = $_POST["prenom_client"];
     $mail_client = $_POST["mail_client"];
 
-    $sql = "INSERT INTO Reservation (excursion_id, date_reservation, horaire, nombre_billets, mail_client_fk) VALUES (:id_excursion, :date_reservation, :horaire, :nombre_billets, :mail_client_fk)";
-    $stmt = $conn->prepare($sql);
+    try {
+        // Début de la transaction
+        $conn->beginTransaction();
 
-    $stmt->bindParam(':id_excursion', $id_excursion);
-    $stmt->bindParam(':date_reservation', $date_reservation);
-    $stmt->bindParam(':horaire', $horaire);
-    $stmt->bindParam(':nombre_billets', $nombre_billets);
-    $stmt->bindParam(':mail_client_fk', $mail_client);
+        // Insérer le client
+        $sql = "INSERT INTO Client (mail_client, nom_client, prenom_client) VALUES (:mail_client, :nom_client, :prenom_client)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':mail_client', $mail_client);
+        $stmt->bindParam(':nom_client', $nom_client);
+        $stmt->bindParam(':prenom_client', $prenom_client);
+        $stmt->execute();
 
-    $stmt->execute();
+        // Insérer la réservation
+        $sql = "INSERT INTO Reservation (excursion_id, date_reservation, horaire, nombre_billets, mail_client_fk) VALUES (:id_excursion, :date_reservation, :horaire, :nombre_billets, :mail_client_fk)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id_excursion', $id_excursion);
+        $stmt->bindParam(':date_reservation', $date_reservation);
+        $stmt->bindParam(':horaire', $horaire);
+        $stmt->bindParam(':nombre_billets', $nombre_billets);
+        $stmt->bindParam(':mail_client_fk', $mail_client);
+        $stmt->execute();
 
-    $sql = "INSERT INTO Client (mail_client, nom_client, prenom_client) VALUES (:mail_client, :nom_client, :prenom_client)";
-    $stmt = $conn->prepare($sql);
+        $conn->commit();
 
-    $stmt->bindParam(':mail_client', $mail_client);
-    $stmt->bindParam(':nom_client', $nom_client);
-    $stmt->bindParam(':prenom_client', $prenom_client);
+        // Envoi de l'email de confirmation
+        $sujet = "Confirmation de réservation DeepBlue";
+        $message = "Merci à vous, votre réservation a été confirmée. À bientôt dans l'eau !";
+        mail($mail_client, $sujet, $message);
 
-
-    $stmt->execute();
-
-        //  Configuration de l'e-mail pour l'utilisateur qui a réservé
-$sujet = "Confirmation de réservation DeepBlue ";
-$message = "Merci à vous, votre réservation a été confirmée. A bientôt dans l'eau ! ";
-
-    // Envoi de l'email
-    mail($mail_client, $sujet, $message);
+        // Définir le message de confirmation
+        $confirmationMessage = "✅ Votre réservation a été enregistrée avec succès. ✅";
+    } catch (Exception $e) {
+        // Messsage d'erreur si les données ne sont pas envoyé dans la base de données
+        $conn->rollBack();
+        $confirmationMessage = "❌ Une erreur est survenue lors de votre réservation. Veuillez réessayer. ❌";
+    }
 }
+
+
 ?>
+ <!-- Affichage du message de confirmation -->
+ <div class="message">
+     <?php if (!empty($confirmationMessage)) : ?>
+        <p class="confirmation-message"><?php echo $confirmationMessage; ?></p>
+    <?php endif; ?>
+ </div>
+
 
     <div class="loader">
         <div class="custom-form-container">
-            <div class="custom-progress-container">
-                <div class="custom-progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="custom-slider">
-                <div class="custom-photos">
-                    <div class="custom-photo image active" id="form1-container">
+            
                         <form method="post" action="form.php" enctype="multipart/form-data" id="form1">
                             <h2 class="custom-title">Deep Blue</h2>
+                            <p class="obligatoire">* Champs obligatoires</p>
                             <h3 class="custom-subtitle">Profil</h3>
                             <label for="nom">Nom :</label>
-                            <input type="text" id="nom" name="nom_client" placeholder="Votre nom" required><br>
+                            <input type="text" id="nom" name="nom_client" placeholder="Votre nom *       (max 255 caractères)" required><br>
                             <label for="prenom">Prénom :</label>
-                            <input type="text" id="prenom" name="prenom_client" placeholder="Votre prénom" required><br> 
-                            <label for="email">Email :</label>
-                            <input type="email" id="email" name="mail_client" placeholder="Votre email" required><br>
+                            <input type="text" id="prenom" name="prenom_client" placeholder="Votre prénom *     (max 255 caractères)" required><br> 
+                            <label for="mail">Email :</label>
+                            <input type="email" id="email" name="mail_client" placeholder="Votre email *       (max 255 caractères)" required><br>
 
                             <h3 class="custom-subtitle">Excursion</h3>
-                            <label for="Excursion">Type d'excursion :</label>
+                            <label for="Excursion" >Type d'excursion :</label>
                             <select id="Excursion" name="id_excursion">
                                 <optgroup label="Types">
-                                    <option value="">-----</option>
+                                    <option value="">----- *</option required>
                                     <option value="1">Le champs de poissons</option>
                                     <option value="2">Les terreurs des mers</option>
                                     <option value="3">Le monde caché</option>
@@ -110,11 +125,11 @@ $message = "Merci à vous, votre réservation a été confirmée. A bientôt dan
                                 </optgroup>
                             </select><br>
                             <label for="jour">Jour :</label>
-                            <input type="date" id="jour" name="date_reservation" required><br>
+                            <input type="date" id="jour" name="date_reservation"><br>
                             <label for="Horaire">Horaire :</label>
                             <select id="Horaire" name="horaire">
                                 <optgroup label="Horaires">
-                                    <option value="">..h - ..h</option>
+                                    <option value="">..h - ..h *</option>
                                     <option value="8">8h -10h</option>
                                     <option value="10">10h -12h</option>
                                     <option value="13">13h -15h</option>
@@ -129,9 +144,7 @@ $message = "Merci à vous, votre réservation a été confirmée. A bientôt dan
                         </form>
                     
                     </div>
-                </div>
-            </div>
-        </div>
+                
     </div>
     </section>
 
