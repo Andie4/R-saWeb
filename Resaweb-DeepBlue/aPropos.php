@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/meduse.png">
 </head>
 <body>
 
@@ -30,8 +31,8 @@
 
     <section class="aPropos ">
         <h1 class="titrePages">A propos</h1>
-        <h3 class="titresParagraphes">Autrice du site</h3><br>
-        <p class="paragraphe">Ce site à été créé par <span>Andréa</span> élève en première année de BUT MMI à Champs sur marne dans le cadre d'une SAE ( situation d'apprentissage évalué). j'ai choisis ce thème car j'aime beaucoup le monde océanique pour les animaux qui y habitent, pour ces beaux coraux ou encore blablablabla </p> <br><br>
+        <h2 class="titresParagraphes">Autrice du site</h2><br>
+        <p class="paragraphe">Ce site à été créé par <span>Andréa</span> élève en première année de BUT MMI à Champs sur marne dans le cadre d'une SAE ( situation d'apprentissage évalué). J'ai choisis ce thème car j'aime beaucoup le monde océanique pour les animaux qui y habitent, pour ces beaux coraux ou encore blablablabla </p> <br><br>
         <h3 class="titresParagraphes">Mentions légales</h3><br>
         <p class="paragraphe">
             Hébergeur : Université Gustave Eiffel
@@ -41,11 +42,10 @@
             <br>Le formulaire permettant la création d’une analogie personnalisée recueille votre adresse de courriel et votre adresse IP. Pour toute question portant sur la collecte ou le traitement de vos données à caractère personnel par l’UPEM, vous pouvez saisir la personne responsable du traitement des données qui est : Philippe Gambette (philippe.gambette@univ-eiffel.fr). Les fichiers détenus par l'UPEM qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne feront jamais l'objet d'une commercialisation. <br><br>
         
             <br> Sources des images : <br>
-            <br> Aquarelle :<a
-                href="https://www.freepik.com/free-vector/watercolor-blue-background_23761117.htm?query=bleu#from_view=detail_alsolike">Freepik</a>
-            <br> Aigle : <a
-                href="https://www.shutterstock.com/fr/image-vector/bald-eagle-isolated-on-white-this-1059061598">Alexey
-                Pushkin </a>
+            <br> Favicon méduse : <a
+                href="https://www.flaticon.com/fr/icone-gratuite/meduse_3068009?term=m%C3%A9duses&page=1&position=17&origin=search&related_id=3068009">Flaticon</a>
+            <br> Footer vague : <a
+                href="https://codepen.io/luc-benart/details/XWaNoMK">Nadine Coelho</a>
             <br> Bonzaï : <a
                 href="https://www.shutterstock.com/fr/image-illustration/zen-bonsai-tree-green-neutral-background-2204308917">
                 CGS Graphics</a>
@@ -88,7 +88,6 @@
       <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
     </ul>
 
-            <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
         </footer>
   <script  src="resaweb.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
