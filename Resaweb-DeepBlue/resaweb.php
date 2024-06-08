@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap"
         rel="stylesheet">
         <link rel="icon" href="images/meduse.png">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,8 +47,11 @@
 
         <!-- page d'acceuil -->
         <div class="homePage" id="enSavoirPlus">
+        <div data-aos="fade-right">
             <img src="https://images.unsplash.com/photo-1602199926649-2e5e447bab97?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="" class="imgPresentation">
+        </div>
+        <div data-aos="fade-left">
             <div class="partie1">
                 <h2 class="contourBleu sousTitre1"><span>Pourquoi choisir</span><br> <span>DEEP BLUE</span></h2>
                 <h3 class="sousTitre2">Explorez les trésors cachés de l'océan avec <span class="policeBleu">DEEP
@@ -56,13 +60,17 @@
                     découvertes
                     inoubliables.</p>
             </div>
+        </div>
+            
+            
 
 
         </div>
         </section>
     </div>
     <section class="">
-        <main class="apercuCatalogue">
+    <div data-aos="fade-down">
+         <main class="apercuCatalogue">
         <section class="apercuArticleCatalogue un" >
             <img src="https://plus.unsplash.com/premium_photo-1682623305315-806515db9c3f?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="" class="imgApercu">
@@ -82,6 +90,8 @@
         </section>
 
     </main>
+    </div>
+       
 
     <main class="container-lien">
     <a href="excursions.php " class="lienReserver">En savoir plus</a>
@@ -122,6 +132,11 @@
 
 
     <script src="resaweb.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--Pour initialiser le plugin AOS -->
+    <script>
+        AOS.init();
+    </script>   
 </body>
 
 </html>
