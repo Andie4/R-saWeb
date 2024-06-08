@@ -73,10 +73,54 @@ if (isset($_POST['valider'])) {
 
         $conn->commit();
 
-        // Envoi de l'email de confirmation
-        $sujet = "Confirmation de réservation DeepBlue";
-        $message = "Merci à vous, votre réservation a été confirmée. À bientôt dans l'eau !";
+        // Envoi de l'email de confirmation au client 
+        $sujet = "Confirmation de réservation DeepBlue ";
+        $message = "
+      <html>
+        <head>
+            <title>Confirmation de réservation</title>
+        </head>  
+
+        <body>
+          <p>Bonjour $nom_client $prenom_client, </p>
+          <p>Les détails de votre réservation : 1</p> 
+        <ul>
+            <li>Activité : $id_excursion</li>
+            <1i>Date : $date_reservation</1i>
+            <1i>Horaire : $horaire</11>
+            <1i>Horaire : $nombre_billets</11>
+            
+        </ul>
+          <p>Merci et à bientôt dans l'eau !</p>
+        </body>
+      </html>";
         mail($mail_client, $sujet, $message);
+
+        // Envoi de l'email de confirmation à moi, l'administrice du site
+        $toAdmin = "votre-email@domaine.com"; // Remplacez par votre adresse email
+$sujetAdmin = "Nouvelle réservation pour une excursion";
+$messageAdmin = "
+<html>
+<head>
+    <title>Nouvelle réservation</title>
+</head>  
+
+<body>
+  <p>Une nouvelle réservation a été effectuée :</p> 
+<ul>
+    <li>Nom : $nom_client</li>
+    <li>Prénom : $prenom_client</li>
+    <li>Email : $mail_client</li>
+    <li>Activité : $id_excursion</li>
+    <li>Date de réservation : $date_reservation</li>
+    <li>Horaire : $horaire</li>
+    <li>Nombre de billets : $nombre_billets</li>
+</ul>
+</body>
+</html>";
+
+mail($toAdmin, $sujetAdmin, $messageAdmin);
+
 
         // Définir le message de confirmation
         $confirmationMessage = "✅ Votre réservation a été enregistrée avec succès. ✅";
