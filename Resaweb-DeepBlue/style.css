@@ -293,7 +293,6 @@ h1 span {
 
 .apercuCatalogue {
     display: flex;
-    display: grid;
     justify-content: center;
 }
 
@@ -408,10 +407,13 @@ h1 span {
 
 .paragrapheGras {
     font-weight: bold;
-    color: var(--color5);
+    color: var(--color6);
 }
 .gras{
     font-weight: bold;
+}
+.gras-blanc{
+    color: var(--color8);
 }
 
 
@@ -606,77 +608,37 @@ h1 span {
 }
 
 .catalogue {
-    display: flex;
-    justify-content: center;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
 
 }
 
 .articleCatalogue {
-    /* height: 70vh;change la longeur de la boite ici en bleu */
-    width: 40vh;
-    margin: 10px;
     background-color: var(--color5);
     border-radius: 15px;
     padding-bottom: 0px;
     
 }
-@media (width<=887px){
+@media (max-width: 887px) {
     .catalogue {
-        flex-direction: column;
-        justify-content: center;
-    
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
 
-.un{
-    grid-column: 1;
-    grid-row: 1;
+@media (max-width: 1040px) {
+    .catalogue {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.deux{
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.trois{
-    grid-column: 3;
-    grid-row: 1;
-}
-
-/* @media (width<=1030px){
-.catalogue{
-    .un{
-        grid-column: 1;
-        grid-row: 1;
-    }
-    .deux{
-        grid-column: 2;
-        grid-row: 1;
-    }
-    .trois{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    
-    .quatre{
-        grid-column: 2;
-        grid-row: 2;
-    }
-    .cinq{
-        grid-column: 1;
-        grid-row: 3;
-    }
-    .six{
-        grid-column: 2;
-        grid-row: 3;
-    }
-} 
-} */
 
 .imgCatalogue {
-    height: 30vh;
-    width: 40vh;
+    height: 300px;
+    width: 400px;
     border-radius: 15px;
 
 }
@@ -706,6 +668,10 @@ h1 span {
     font-family: "Montserrat", sans-serif;
     margin-left: 150px;
     margin-right: 150px;
+    background-color:rgba(128, 128, 128, 0.453);
+    padding: 40px;
+    margin-bottom: 200px;
+    border-radius: 20px;
 }
 .excursion-description{
     color: var(--color4);
@@ -730,6 +696,9 @@ h1 span {
 .detail-title{
     color: #072A40;
 }
+
+
+
 /* formulaire */
 .custom-form-container {
     width: 520px;
