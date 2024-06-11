@@ -4,25 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le champs des poissons</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/meduse.png">
-</head>
+    <link rel="icon" href="images/pe-meduse.png"></head>
 
 <body>
     <div class="container espacePageAcceuil"></div>
 
     <header>
-    <nav>
-      <a href="resaweb.php" class="logo">ESM</a>
-      <ul class="navbar">
-        <li><a href="notreHistoire.php">Notre histoire</a></li>
-        <li><a href="excursions.php">Excursions</a></li>
-        <li><a href="vieMarine.php">Vie marine</a></li>
-        <li><a href="aPropos.php">A propos</a></li>
-      </ul>
-    </nav>
-    </header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
   
       <section class="apparence">
 
@@ -32,7 +31,7 @@
   <div class="excursion-description">
     <p>Découvrez la richesse de la vie marine en explorant "Le champs des poissons". Lors de cette excursion en bateau, vous aurez l'occasion de voir une variété de poissons tropicaux et de coraux magnifiques. Préparez-vous à être émerveillé par les couleurs vibrantes et la diversité des espèces sous-marines.
       Cette excursion vas vous permettre de voir les différents poissons présents près de
-    la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
+    la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné.
     Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer
     </p>
   </div>

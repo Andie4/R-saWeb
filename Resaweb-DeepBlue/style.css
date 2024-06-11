@@ -54,7 +54,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     transition: 0;
-    background-color: var(--color3);
+    background-color: var(--color5);
 }
 
 nav {
@@ -71,15 +71,16 @@ nav {
     justify-content: center;
 }
 
-
+.logo-link{
+    display: inline-block;
+}
 
 .logo {
-    color: var(--color8);
-    /* background-color: blue; */
-    font-weight: bold;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-right: 30px;
+    margin-right: 30px; 
+    width: 55px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
     
 }
 
@@ -151,6 +152,74 @@ nav ul {
 }
 
 
+
+
+
+
+
+/* Styles pour l'effet parallax */
+
+.banniere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center; /* Ajout de cette ligne */
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Pour placer l'image de fond en arrière-plan */
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1; /* Pour placer les éléments au-dessus de l'image de fond */
+    width: 300px; /* Augmentez la taille des poissons */
+    height: 250px; /* Augmentez la taille des poissons */
+}
+
+.parallax1 {
+    left: 20%; /* Commence à gauche */
+    top: 15%; /* Ajustez la hauteur initiale */
+}
+
+.parallax2 {
+    right: 40%; /* Commence à droite */
+    top: 70%; /* Ajustez la hauteur initiale */
+}
+
+.parallax3 {
+    left: 5%; /* Commence à gauche */
+    top: 40%; /* Ajustez la hauteur initiale */
+}
+
+.parallax4 {
+    right: 5%; /* Commence à droite */
+    top: 40%; /* Ajustez la hauteur initiale */
+}
+
+.titreBanniere {
+    color: white;
+    z-index: 2;
+    font-size: 3rem;
+    width: max-content;
+    white-space: nowrap; /* Empêche le titre de se mettre sur plusieurs lignes */
+}
+
+
+
+
+
 /* titre des pages  */
 .titrePages {
     font-size: 3rem;
@@ -165,23 +234,20 @@ section {
     color: var(--color4);
 }
 
-.imgBanniere {
-    background-image: url("https://img.freepik.com/vecteurs-libre/dessin-anime-atlantis-englouti-sous-eau-ruines-antiques-illustration-du-personnage-du-conducteur_1284-61870.jpg?t=st=1716662396~exp=1716665996~hmac=c41c1e528df30e1dcec50eef1c0fdec97240644350088de5022f5e9dd758866f&w=1380");
-    background-size: cover;
-    height: 900px;
-} 
+
 
 .titreBanniere {
     transform: translate(-50%, -50%);
     /* background-color: rgba(160, 41, 41, 0.7); */
     border-radius: 5px;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: transparent;
     /* Rendre le texte transparent */
-    -webkit-text-stroke-width: 8px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--color8);
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     display: block;
+    justify-content: center;
 
 }
 
@@ -199,9 +265,14 @@ section {
     padding-top: 4%;
     color: var(--color8);
     clear: both;
+    margin-right: 150px;
+    margin-left: 150px;
 
 }
-
+.presentation{
+    margin-right: 150px;
+    margin-left: 150px;
+}
 h1 span {
     padding: 0 15px;
     flex: content;
@@ -304,33 +375,9 @@ h1 span {
     border-radius: 20px;
 }
 
-@media (width<=1030px){
+@media (width<=1000px){
     .apercuCatalogue{
-        .un{
-            grid-column: 1;
-            grid-row: 1;
-        }
-        .deux{
-            grid-column: 2;
-            grid-row: 1;
-        }
-        .trois{
-            grid-column: 1;
-            grid-row: 2;
-        }
-        
-        .quatre{
-            grid-column: 2;
-            grid-row: 2;
-        }
-        .cinq{
-            grid-column: 1;
-            grid-row: 3;
-        }
-        .six{
-            grid-column: 2;
-            grid-row: 3;
-        }
+        display: grid;
     } 
 }
 
@@ -596,6 +643,12 @@ h1 span {
 
 
 
+
+
+
+
+
+
 /* excursions */
 .excursions {
     font-weight: lighter;
@@ -606,7 +659,20 @@ h1 span {
     justify-content: center;
 
 }
+.recherches{
+    width: 400px;
+   background-color: var(--color4);
+   color: var(--color8);
+   display: flex;
+   justify-content: center;
+    margin:  auto;
 
+}
+.groupe-boutons{
+    display: flex;
+   justify-content: center;
+    margin:  auto;
+}
 .catalogue {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -620,8 +686,12 @@ h1 span {
     background-color: var(--color5);
     border-radius: 15px;
     padding-bottom: 0px;
+    width: 300px;
+    height: 400px;
     
 }
+
+
 @media (max-width: 887px) {
     .catalogue {
         grid-template-columns: 1fr;
@@ -637,17 +707,18 @@ h1 span {
 
 
 .imgCatalogue {
-    height: 300px;
-    width: 400px;
+    height: auto;
+    width: 100%;
     border-radius: 15px;
 
 }
 
 .sousTitreExcursions {
+    justify-content: center;
     padding: 8px;
-    /* color: #F9F7F0; */
-    color: var(--color2);
-    /* text-decoration: none; */
+    color: var(--color8);
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .texteExcursions {
@@ -733,7 +804,7 @@ input, select {
 
 button {
     padding: 10px 20px;
-    background-color: var(--color4);;
+    background-color: var(--color5);;
     color: var(--color8);
     border: none;
     border-radius: 5px;
@@ -748,7 +819,7 @@ button:hover {
 }
 .trie-filtre{
     padding: 10px 20px;
-    background-color: var(--color2);;
+    background-color: var(--color5);;
     color: var(--color8);
     border: none;
     border-radius: 5px;
@@ -826,7 +897,7 @@ button:hover {
     align-items: center;
     
     font-weight: bolder;
-    background-color: var(--color2);
+    background-color: var(--color5);
     padding: 50px;
     border-radius: 80px 10px;
     min-width: 200px;
@@ -863,7 +934,7 @@ summary {
     position: relative;
     background-color: var(--color6);
     border-radius: 10px;
-    color: var(--color8);
+    color: var(--color4);
 }
 
 summary::marker {

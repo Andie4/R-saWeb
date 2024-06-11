@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Blue</title>
     <link rel="stylesheet" href="style.css">   
-    <link rel="icon" href="images/meduse.png"> 
-</head>
+    <link rel="icon" href="images/pe-meduse.png"></head>
 <body>
     <div class="container espacePageAcceuil"></div>
 
     <header>
-
-        <nav>
-          <a href="resaweb.php" class="logo">ESM</a>
-          <ul class="navbar">
-            <li><a href="notreHistoire.php">Notre histoire</a></li>
-            <li><a href="excursions.php">Excursions</a></li>
-            <li><a href="vieMarine.php">Vie marine</a></li>
-            <li><a href="aPropos.php">A propos</a></li>
-          </ul>
-        </nav>
-      </header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
       <section class="apparence">
 
 <div class="detailsExcursions">
-  <h1 class="detail-title">Le champs des poissons</h1>
+  <h1 class="detail-title">Le monde caché</h1>
 
   <div class="excursion-description">
-    <p>Découvrez la richesse de la vie marine en explorant "Le champs des poissons". Lors de cette excursion en bateau, vous aurez l'occasion de voir une variété de poissons tropicaux et de coraux magnifiques. Préparez-vous à être émerveillé par les couleurs vibrantes et la diversité des espèces sous-marines.
-      Cette excursion vas vous permettre de voir les différents poissons présents près de
-    la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
-    Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer
+    <p>Plongez dans les profondeurs de l'océan et découvrez des grottes sous-marines fascinantes et mystérieuses. Équipé de votre matériel de plongée, vous aurez l'opportunité de nager à travers des tunnels et des cavernes submergées, en observant des formations rocheuses impressionnantes et une vie marine unique.
+      Cette excursion vous offre une aventure inoubliable et une chance rare d'explorer des grottes sous-marines cachées. Vous serez émerveillé par les jeux de lumière et les ombres dans les profondeurs, ainsi que par la diversité des créatures marines qui habitent ces environnements extraordinaires. Préparez-vous pour une expérience palpitante et enrichissante sous les vagues.
     </p>
-  </div>
-  <div class="excursion-info">
-    <p class="excursion-type"> <span class="gras">Type:</span> <span class="gras-blanc">Excursion en bateau</span></p>
-    <p class="excursion-price"><span class="gras">Prix:</span><span class="gras-blanc"> 50€</span> </p>
-  </div>
+</div>
+<div class="excursion-info">
+    <p class="excursion-type"><span class="gras">Type:</span> <span class="gras-blanc">Plongée sous-marine </span></p>
+    <p class="excursion-price"><span class="gras">Prix:</span> <span class="gras-blanc">150€</span></p>
+</div>
+
   
 </div>
 </div>

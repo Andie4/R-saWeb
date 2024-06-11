@@ -5,39 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Blue</title>
     <link rel="stylesheet" href="style.css">    
-    <link rel="icon" href="images/meduse.png">
-</head>
+    <link rel="icon" href="images/pe-meduse.png"></head>
 <body>
     <div class="container espacePageAcceuil"></div>
 
     <header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav>
-          <a href="resaweb.php" class="logo">ESM</a>
-          <ul class="navbar">
-            <li><a href="notreHistoire.php">Notre histoire</a></li>
-            <li><a href="excursions.php">Excursions</a></li>
-            <li><a href="vieMarine.php">Vie marine</a></li>
-            <li><a href="aPropos.php">A propos</a></li>
-          </ul>
-        </nav>
-      </header>
       <section class="apparence">
 
 <div class="detailsExcursions">
-  <h1 class="detail-title">Le champs des poissons</h1>
+  <h1 class="detail-title">Les oiseaux aquatiques</h1>
 
   <div class="excursion-description">
-    <p>Découvrez la richesse de la vie marine en explorant "Le champs des poissons". Lors de cette excursion en bateau, vous aurez l'occasion de voir une variété de poissons tropicaux et de coraux magnifiques. Préparez-vous à être émerveillé par les couleurs vibrantes et la diversité des espèces sous-marines.
-      Cette excursion vas vous permettre de voir les différents poissons présents près de
-    la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
-    Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer
+    <p>Venez découvrir la grâce majestueuse des raies avec notre excursion en bateau "Le ballet des raies". Lors de cette sortie en mer, vous aurez l'occasion unique d'observer ces magnifiques créatures marines évoluer avec élégance dans leur habitat naturel. Les raies, avec leurs mouvements fluides et leur apparence énigmatique, offrent un spectacle fascinant qui vous laissera des souvenirs inoubliables.
+      Cette excursion vous permettra de voir de près plusieurs espèces de raies, glissant harmonieusement sous la surface de l'eau. Profitez de cette aventure pour en apprendre davantage sur ces animaux incroyables et leur environnement.
     </p>
-  </div>
-  <div class="excursion-info">
-    <p class="excursion-type"> <span class="gras">Type:</span> <span class="gras-blanc">Excursion en bateau</span></p>
-    <p class="excursion-price"><span class="gras">Prix:</span><span class="gras-blanc"> 50€</span> </p>
-  </div>
+</div>
+<div class="excursion-info">
+    <p class="excursion-type"><span class="gras">Type:</span> <span class="gras-blanc">Excursion en bateau</span></p>
+    <p class="excursion-price"><span class="gras">Prix:</span> <span class="gras-blanc">50€</span></p>
+</div>
+
   
 </div>
 </div>

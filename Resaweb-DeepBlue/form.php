@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Blue</title>
     <link rel="stylesheet" href="style.css">    
-    <link rel="icon" href="images/meduse.png">
-</head>
+    <link rel="icon" href="images/pe-meduse.png"></head>
 <body>
     <div class="container espacePageAcceuil"></div>
 
@@ -97,7 +96,7 @@ if (isset($_POST['valider'])) {
         mail($mail_client, $sujet, $message);
 
         // Envoi de l'email de confirmation à moi, l'administrice du site
-        $toAdmin = "votre-email@domaine.com"; // Remplacez par votre adresse email
+        $toAdmin = "andreacaneval6@gmail.com"; 
 $sujetAdmin = "Nouvelle réservation pour une excursion";
 $messageAdmin = "
 <html>
@@ -169,7 +168,7 @@ mail($toAdmin, $sujetAdmin, $messageAdmin);
                                 </optgroup>
                             </select><br>
                             <label for="jour">Jour :</label>
-                            <input type="date" id="jour" name="date_reservation"><br>
+                            <input type="date" id="jour" name="date_reservation" min="<?= date('Y-m-d')?>"><br>
                             <label for="Horaire">Horaire :</label>
                             <select id="Horaire" name="horaire">
                                 <optgroup label="Horaires">

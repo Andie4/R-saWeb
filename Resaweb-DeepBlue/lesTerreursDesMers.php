@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Blue</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/meduse.png">
-</head>
+    <link rel="icon" href="images/pe-meduse.png"></head>
 <body>
     <div class="container espacePageAcceuil"></div>
 
     <header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <nav>
-      <a href="resaweb.php" class="logo">ESM</a>
-      <ul class="navbar">
-        <li><a href="notreHistoire.php">Notre histoire</a></li>
-        <li><a href="excursions.php">Excursions</a></li>
-        <li><a href="vieMarine.php">Vie marine</a></li>
-        <li><a href="aPropos.php">A propos</a></li>
-      </ul>
-    </nav>
-      </header>
       <section class="apparence">
 
 <div class="detailsExcursions">
-  <h1 class="detail-title">Le champs des poissons</h1>
+  <h1 class="detail-title">Les terreurs des mers</h1>
 
   <div class="excursion-description">
-    <p>Découvrez la richesse de la vie marine en explorant "Le champs des poissons". Lors de cette excursion en bateau, vous aurez l'occasion de voir une variété de poissons tropicaux et de coraux magnifiques. Préparez-vous à être émerveillé par les couleurs vibrantes et la diversité des espèces sous-marines.
-      Cette excursion vas vous permettre de voir les différents poissons présents près de
-    la surface. Vous aurrez peut-être la chance de voir le balais des poissons . Plus de 300 poissons se déplaçantde façons coordonné. <br>
-    Ce balais rassemble plusieurs poissons ce qui fait plus de 40 couleurs a observer
+    <p>Préparez-vous à rencontrer de majestueux requins dans leur habitat naturel et à nager à leurs côtés. Ressentez l'adrénaline en observant ces incroyables prédateurs glisser gracieusement sous les eaux cristallines.
+      Cette excursion vous offre une occasion unique d'en apprendre davantage sur les requins et leur rôle essentiel dans l'écosystème marin. Vous aurez peut-être la chance d'assister à des comportements fascinants et de voir de près ces créatures souvent mal comprises. Équipez-vous de votre masque et tuba, et vivez une expérience inoubliable en nageant aux côtés de ces majestueux seigneurs des mers.
     </p>
-  </div>
-  <div class="excursion-info">
-    <p class="excursion-type"> <span class="gras">Type:</span> <span class="gras-blanc">Excursion en bateau</span></p>
-    <p class="excursion-price"><span class="gras">Prix:</span><span class="gras-blanc"> 50€</span> </p>
-  </div>
+</div>
+<div class="excursion-info">
+    <p class="excursion-type"><span class="gras">Type:</span> <span class="gras-blanc">Masque et tuba</span></p>
+    <p class="excursion-price"><span class="gras">Prix:</span> <span class="gras-blanc">100€</span></p>
+</div>
   
 </div>
 </div>

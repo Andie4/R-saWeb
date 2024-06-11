@@ -50,7 +50,7 @@ $allexcursion = $conn->query($sql);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/meduse.png">
+  <link rel="icon" href="images/pe-meduse.png">
 </head>
 
 <body>
@@ -58,17 +58,16 @@ $allexcursion = $conn->query($sql);
   <div class="container espacePageAcceuil"></div>
 
   <header>
-
-    <nav>
-      <a href="resaweb.php" class="logo">ESM</a>
-      <ul class="navbar">
-        <li><a href="notreHistoire.php">Notre histoire</a></li>
-        <li><a href="excursions.php">Excursions</a></li>
-        <li><a href="vieMarine.php">Vie marine</a></li>
-        <li><a href="aPropos.php">A propos</a></li>
-      </ul>
-    </nav>
-  </header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
   </div>
 
@@ -78,27 +77,31 @@ $allexcursion = $conn->query($sql);
 
  <!-- Barre de recherche -->
   <form method="GET">
-      <input type="search" name="s" placeholder="Rechercher..." autocomplete="off">
+      <input type="search" name="s" placeholder="Rechercher..." autocomplete="off" class="recherches">
     </form>
-
 
 
     
 <span>
-      <p>Filtrer par genre : 
-      <!-- Boutons de filtre -->
+  <div class="groupe-boutons">
+    <!-- Boutons de filtre -->
           <a href="excursions.php?filtre=bateau" class="trie-filtre">Bateau</a>
           <a href="excursions.php?filtre=Masque et tuba" class="trie-filtre">Masque et tuba</a>
           <a href="excursions.php?filtre=Plongée sous-marine" class="trie-filtre">Plongée sous marine</a>
           <a href="excursions.php" class="trie-filtre">Tout voir</a>
-      </p>
-</span>
-    
-    
-      <a href="excursions.php?tri=nom_excursion" id="A-Z" class="trie-filtre">A-Z</a>
+          <!-- boutons de trie -->
+          <a href="excursions.php?tri=nom_excursion" id="A-Z" class="trie-filtre">A-Z</a>
       <a href="excursions.php?tri=nom_excursion&order=desc" id="Z-A" class="trie-filtre">Z-A</a>
       <a href="excursions.php?tri=prix_excursion" id="croissant" class="trie-filtre">Croissant</a>
       <a href="excursions.php?tri=prix_excursion&order=desc" id="decroissant" class="trie-filtre">Décroissant</a>
+  </div><br>
+      
+      
+    
+</span>
+    
+    
+      
 
   </div>
      
@@ -116,7 +119,7 @@ $allexcursion = $conn->query($sql);
                   <div class="articleCatalogue <?= $genreClass ?>">
                       <a href="<?= $Excursion['url_excursion']; ?>">
                           <img src="<?= $Excursion['chemin_image'] ?>" alt="" class="imgCatalogue">
-                          <h3 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h3>
+                          <h2 class="sousTitreExcursions"><?= $Excursion['nom_excursion']; ?></h2>
                       </a>
                   </div>
           <?php
@@ -201,7 +204,6 @@ $allexcursion = $conn->query($sql);
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>
       <li class="menu__item"><a class="menu__link" href="aPropos.php">A propos</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
     </ul>
 
   </footer>

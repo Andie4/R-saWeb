@@ -10,25 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,551;1,551&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/meduse.png">
+    <link rel="icon" href="images/pe-meduse.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container espacePageAcceuil"></div>
+    
     <header>
-                
-    <nav>
-      <a href="resaweb.php" class="logo">ESM</a>
-      <ul class="navbar">
-        <li><a href="notreHistoire.php">Notre histoire</a></li>
-        <li><a href="excursions.php">Excursions</a></li>
-        <li><a href="vieMarine.php">Vie marine</a></li>
-        <li><a href="aPropos.php">A propos</a></li>
-      </ul>
-    </nav>
-    </header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
     </div>
 
@@ -102,24 +102,23 @@
     </section>
 
     <footer class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
-        
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+   
 
-        <ul class="menu">
+    <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>
       <li class="menu__item"><a class="menu__link" href="aPropos.php">A propos</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
     </ul>
 
-    </footer>
+  </footer>
     
     <script src="resaweb.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

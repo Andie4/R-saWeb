@@ -15,17 +15,16 @@
     <div class="container espacePageAcceuil"></div>
 
     <header>
-                
-    <nav>
-      <a href="resaweb.php" class="logo">ESM</a>
-      <ul class="navbar">
-        <li><a href="notreHistoire.php">Notre histoire</a></li>
-        <li><a href="excursions.php">Excursions</a></li>
-        <li><a href="vieMarine.php">Vie marine</a></li>
-        <li><a href="aPropos.php">A propos</a></li>
-      </ul>
-    </nav>
-    </header>
+            <nav>
+                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <ul class="navbar">
+                    <li><a href="notreHistoire.php">Notre histoire</a></li>
+                    <li><a href="excursions.php">Excursions</a></li>
+                    <li><a href="vieMarine.php">Vie marine</a></li>
+                    <li><a href="aPropos.php">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
   </div>
 
@@ -51,18 +50,17 @@
             <br> Animations au scroll : <a
                 href="https://youtu.be/wKkFh6O9A0M?si=ZFi2SvnUIeGwIDZl">
                 AKDEV</a>
-            <br> Musique : <a
-                href="https://www.shutterstock.com/fr/image-vector/contrabass-bow-stringed-musical-instruments-illustration-1951861300">
-                Nataliia Reshetova</a>
-            <br> Rire : <a
-                href="https://www.istockphoto.com/fr/vectoriel/enfants-enfants-enfants-riant-ensemble-vecteur-gm1171405497-324515183?phrase=rire">
+            <br> Tortue : <a
+                href="https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2022/12/tortue-marine-scaled.jpg">
+                Science et vie</a>
+            <br> Poisson bleu : <a
+                href="https://unsplash.com/fr/photos/photographie-selective-de-poissons-a-nageoires-bleues-et-jaunes-t_bRgI89b_U">
                 Colorfuel Studio</a>
-            <br> Printemps : <a href="https://pixabay.com/fr/vectors/myosotis-fleurs-plantes-6009034/">dandelion_tea
-
+            <br> Poisson rose : <a href="https://images.unsplash.com/photo-1540759893615-cb37a9f6027a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">unsplash
             </a>
-            <br> Vert : <a
-                href="https://www.istockphoto.com/fr/vectoriel/feuilles-nature-logo-vector-illustration-gm1430703073-473497676">
-                AlfinuZafir</a>
+            <br> Poisson jaune : <a
+                href="https://www.radiofrance.fr/s3/cruiser-production/2022/02/fcd3b51d-c991-4b5b-aed3-aeb5d1e1810e/1200x680_poissons-qui-se-parlent-gettyimages-bc6609-002.jpg">
+                Radio France</a>
             <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
                 OpenClipart-Vectors</a>
             <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
@@ -95,24 +93,24 @@
    
 
     <footer class="footer">
-        <div class="waves">
-              <div class="wave" id="wave1"></div>
-              <div class="wave" id="wave2"></div>
-              <div class="wave" id="wave3"></div>
-              <div class="wave" id="wave4"></div>
-        </div>
-           
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+   
 
-            <ul class="menu">
+    <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>
       <li class="menu__item"><a class="menu__link" href="aPropos.php">A propos</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Recherche</a></li>
     </ul>
 
-        </footer>
+  </footer>
+
   <script  src="resaweb.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
