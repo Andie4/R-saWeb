@@ -3,7 +3,7 @@
 *::before {
     box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
     --color1: #F9F7F0;
@@ -42,14 +42,14 @@ body {
     font-optical-sizing: auto;
     font-weight: 551;
     font-style: normal;
-
+    overflow-x: none;
 }
 
 
 header {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -81,6 +81,8 @@ nav {
     display: block;
     margin-bottom: 5px;
     margin-top: 5px;
+/*    height: 40px;
+*/    
     
 }
 
@@ -168,6 +170,7 @@ nav ul {
     height: 100vh;
     overflow: hidden;
     text-align: center; /* Ajout de cette ligne */
+    overflow: hidden;
 }
 
 .parallax {
@@ -183,29 +186,29 @@ nav ul {
 .parallax1, .parallax2, .parallax3, .parallax4 {
     position: absolute;
     transform: translateY(-50%);
-    z-index: 1; /* Pour placer les éléments au-dessus de l'image de fond */
-    width: 300px; /* Augmentez la taille des poissons */
-    height: 250px; /* Augmentez la taille des poissons */
+    z-index: 1; 
+    width: 300px; 
+    height: 250px; 
 }
 
 .parallax1 {
-    left: 20%; /* Commence à gauche */
-    top: 15%; /* Ajustez la hauteur initiale */
+    left: 20%;
+    top: 15%; 
 }
 
 .parallax2 {
-    right: 40%; /* Commence à droite */
-    top: 70%; /* Ajustez la hauteur initiale */
+    right: 40%; 
+    top: 70%; 
 }
 
 .parallax3 {
-    left: 5%; /* Commence à gauche */
-    top: 40%; /* Ajustez la hauteur initiale */
+    left: 5%; 
+    top: 40%; 
 }
 
 .parallax4 {
-    right: 5%; /* Commence à droite */
-    top: 40%; /* Ajustez la hauteur initiale */
+    right: 5%; 
+    top: 40%; 
 }
 
 .titreBanniere {
@@ -595,7 +598,7 @@ h1 span {
     height: 25px;
     width: 25px;
     background-color: var(--color9);
-    border-radius: 50%;
+    border-radius: 999px;
     display: inline-block;
     margin-right: 20px;
     position: relative;
@@ -606,7 +609,7 @@ h1 span {
 }
 
 .dots1 {
-    background-color: var(--color8);
+    background-color: var(--color4);
 }
 
 .js-navigation {
@@ -626,7 +629,6 @@ h1 span {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--color8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -672,6 +674,7 @@ h1 span {
     display: flex;
    justify-content: center;
     margin:  auto;
+    flex-wrap: wrap;
 }
 .catalogue {
     display: grid;

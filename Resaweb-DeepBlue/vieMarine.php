@@ -20,7 +20,7 @@
     
     <header>
             <nav>
-                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <a href="index.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
                 <ul class="navbar">
                     <li><a href="notreHistoire.php">Notre histoire</a></li>
                     <li><a href="excursions.php">Excursions</a></li>

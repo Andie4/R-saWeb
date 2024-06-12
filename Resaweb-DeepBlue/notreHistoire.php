@@ -20,7 +20,7 @@
 
     <header>
             <nav>
-                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <a href="index.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
                 <ul class="navbar">
                     <li><a href="notreHistoire.php">Notre histoire</a></li>
                     <li><a href="excursions.php">Excursions</a></li>
@@ -42,14 +42,14 @@
                 envoûtante.<br><br>
 
                 Après des années passées à explorer les eaux locales et à plonger dans les récifs coralliens voisins, elle a décidé de partager sa passion avec le monde. En 2018, elle créé DeepBlue dans le but de permettre à d'autres aventuriers de <span class="surlignement">découvrir la magie du monde sous-marin.</span></p>
-            <img src="https://media.istockphoto.com/id/178574094/fr/photo/paysage-marin-tropical.jpg?s=2048x2048&w=is&k=20&c=E4L7sk0-ms93AnwTwMw1taIZgMYjT2sRcyAv_SuHhtY="
+            <img src="images/plage.avif"
                 alt="" class="imgP1">
         </div> 
         </div>
            
         <div data-aos="fade-left">
             <div class="paragraphe2">
-                <img src="https://media.istockphoto.com/id/498580877/fr/photo/poisson-papillon.jpg?s=2048x2048&w=is&k=20&c=viBUkQTWalyRAzyi_lOL-wg_iqQTDkqvUr0_ADLKRbo="
+                <img src="images/poissons.avif"
                     alt="" class="imgP2">
                 <p class="paragrapheR">Depuis lors, Deep Blue s'est développé pour devenir l'un des leaders de l'industrie
                     des excursions sous-marines. Notre équipe dévouée de <span class="surlignement">guides certifiés et de
@@ -65,7 +65,7 @@
                 d'aventures plus audacieuses, nous avons une excursion pour vous. De nos sites de plongée locaux aux
                 destinations exotiques à travers le monde, nous vous invitons à nous rejoindre pour une aventure
                 sous-marine comme aucune autre.</p>
-            <img src="https://media.istockphoto.com/id/623176710/fr/photo/repos-actif-plong%C3%A9e-dans-les-r%C3%A9cifs-coralliens.jpg?s=2048x2048&w=is&k=20&c=vkc1F_0IAv65lN_R68OlEcwpPqRqAIY7G3dtKeMs0_g="
+            <img src="images/plongeurs.avif"
                 alt="" class="imgP3">
         </div>
 </div>
@@ -115,11 +115,11 @@
                     </div>
                 </div>
                 <div class="js-navigation">
-                    <button class="slideLeft">
+                    <button class="slideLeft" onclick="DecaleGauche()">
                         <span class="arrow">
                             <</span>
                     </button>
-                    <button class="slideRight">
+                    <button class="slideRight" onclick="DecaleDroite()">
                         <span class="arrow">></span>
                     </button>
                 </div>
@@ -166,7 +166,7 @@
    
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>

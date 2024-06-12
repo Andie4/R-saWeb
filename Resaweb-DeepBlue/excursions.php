@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-$conn = new PDO('mysql:host=localhost;dbname=resawebdeepblue', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+$conn = new PDO('mysql:host=localhost;dbname=caneval_resaweb', 'caneval', 'CV2rqsrtDxWHNy5', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //recherche
@@ -59,7 +59,7 @@ $allexcursion = $conn->query($sql);
 
   <header>
             <nav>
-                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <a href="index.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
                 <ul class="navbar">
                     <li><a href="notreHistoire.php">Notre histoire</a></li>
                     <li><a href="excursions.php">Excursions</a></li>
@@ -199,7 +199,7 @@ $allexcursion = $conn->query($sql);
    
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>

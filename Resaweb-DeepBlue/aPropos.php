@@ -16,7 +16,7 @@
 
     <header>
             <nav>
-                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <a href="index.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
                 <ul class="navbar">
                     <li><a href="notreHistoire.php">Notre histoire</a></li>
                     <li><a href="excursions.php">Excursions</a></li>
@@ -61,28 +61,14 @@
             <br> Poisson jaune : <a
                 href="https://www.radiofrance.fr/s3/cruiser-production/2022/02/fcd3b51d-c991-4b5b-aed3-aeb5d1e1810e/1200x680_poissons-qui-se-parlent-gettyimages-bc6609-002.jpg">
                 Radio France</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
-            <br> Dessin : <a href="https://pixabay.com/fr/vectors/des-crayons-crayon-de-couleur-bo%C3%AEte-157972/">
-                OpenClipart-Vectors</a>
+            <br> Plage : <a href="https://unsplash.com/fr/photos/plan-deau-bleu-et-clair-K785Da4A_JA">
+                Unsplash</a>
+            <br> Plongeur : <a href="https://unsplash.com/fr/photos/homme-en-combinaison-noire-plongee-sur-leau-avec-banc-de-poissons-eLfDul2Uu8k">
+            Unsplash</a>
+            <br> Poissons : <a href="https://unsplash.com/fr/photos/banc-de-poissons-jaunes-et-noirs-syCfMuwm2ak">
+                Unsplash</a>
             <br>
-            Images page excursion générer avec Adobe Firely
+            Les images de la page excursion ont été généré avec Adobe Firely
             </p>
             
             
@@ -102,7 +88,7 @@
    
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>

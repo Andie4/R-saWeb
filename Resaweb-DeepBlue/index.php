@@ -17,9 +17,9 @@
 
     <div class="container espacePageAcceuil">
 
-        <header>
+    <header>
             <nav>
-                <a href="resaweb.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
+                <a href="index.php" class="logo-link"><img src="images/pe-meduse.png" alt="" class="logo"></a>
                 <ul class="navbar">
                     <li><a href="notreHistoire.php">Notre histoire</a></li>
                     <li><a href="excursions.php">Excursions</a></li>
@@ -33,16 +33,16 @@
          
          <!-- Banière -->
          <div class="banniere">
-            <img src="images/fond-ocean.jpg" alt="" class="parallax">
-            <img src="images/pink-fish.png" alt="" class="parallax1" data-speed="3">
-            <img src="images/blue-fish.png" alt="" class="parallax2" data-speed="5">
-            <img src="images/turtle.png" alt="" class="parallax3" data-speed="7">
-            <img src="images/fish.png" alt="" class="parallax4" data-speed="9">
-            <h1 class="titreBanniere" data-aos="fade-up">
-                <div><span>EXCURSIONS</span></div>
-                <div><span>SOUS MARINE</span></div>
-            </h1>
-        </div>
+    <img src="images/fond-ocean.jpg" alt="" class="parallax">
+    <img src="images/pink-fish.png" alt="" class="parallax1" data-speed="3">
+<img src="images/blue-fish.png" alt="" class="parallax2" data-speed="5">
+<img src="images/turtle.png" alt="" class="parallax3" data-speed="7">
+<img src="images/fish.png" alt="" class="parallax4" data-speed="9">
+    <h1 class="titreBanniere" data-aos="fade-up">
+        <div><span>EXCURSIONS</span></div>
+        <div><span>SOUS MARINE</span></div>
+    </h1>
+</div>
 
 
         <!-- page d'accueil -->
@@ -106,7 +106,7 @@
    
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="resaweb.php">Accueil</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.php">Accueil</a></li>
       <li class="menu__item"><a class="menu__link" href="notreHistoire.php">Notre histoire</a></li>
       <li class="menu__item"><a class="menu__link" href="excursions.php">Excursions</a></li>
       <li class="menu__item"><a class="menu__link" href="vieMarine.php">Vie marine</a></li>
