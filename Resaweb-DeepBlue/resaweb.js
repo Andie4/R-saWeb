@@ -74,4 +74,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+/*vérification que tous les champs sont remplis*/
+document.getElementById('form1').addEventListener('submit', function(event) {
+    let formValid = true;
+    const requiredFields = ['nom_client', 'prenom_client', 'mail_client', 'id_excursion', 'date_reservation', 'horaire', 'nombre_billets'];
+
+    requiredFields.forEach(function(fieldId) {
+        const field = document.getElementById(fieldId);
+        if (!field.value) {
+            formValid = false;
+            field.style.borderColor = 'red'; // Marquer les champs non remplis en rouge
+        } else {
+            field.style.borderColor = ''; // Réinitialiser la bordure si le champ est rempli
+        }
+    });
+
+    if (!formValid) {
+        alert('Veuillez remplir tous les champs obligatoires.');
+        event.preventDefault(); // Empêcher la soumission du formulaire
+    }
+});
 

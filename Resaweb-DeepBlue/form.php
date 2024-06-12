@@ -62,7 +62,7 @@
 
     // Fonction pour envoyer l'email de confirmation à l'administrateur
     function envoyerEmailConfirmationAdmin($nom_client, $prenom_client, $nom_excursion, $date_reservation, $horaire_formate, $nombre_billets) {
-        $sujetAdmin = "Nouvelle réservation DeepBlue";
+        $sujetAdmin = "🚨 Nouvelle réservation DeepBlue🚨 ";
         $messageAdmin = "
         Une nouvelle réservation a été effectuée.
 
@@ -165,47 +165,48 @@
         <div class="loader">
             <div class="custom-form-container">
                 <form method="post" action="form.php" enctype="multipart/form-data" id="form1">
-                    <h2 class="custom-title">Deep Blue</h2>
-                    <p class="obligatoire">* Champs obligatoires</p>
-                    <h3 class="custom-subtitle">Profil</h3>
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom_client" placeholder="Votre nom * (max 255 caractères)" required><br>
-                    <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom_client" placeholder="Votre prénom * (max 255 caractères)" required><br> 
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="mail_client" placeholder="Votre email * (max 255 caractères)" required><br>
+    <h2 class="custom-title">Deep Blue</h2>
+    <p class="obligatoire">* Champs obligatoires</p>
+    <h3 class="custom-subtitle">Profil</h3>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom_client" name="nom_client" placeholder="Votre nom * (max 255 caractères)" required><br>
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom_client" name="prenom_client" placeholder="Votre prénom * (max 255 caractères)" required><br> 
+    <label for="email">Email :</label>
+    <input type="email" id="mail_client" name="mail_client" placeholder="Votre email * (max 255 caractères)" required><br>
 
-                    <h3 class="custom-subtitle">Excursion</h3>
-                    <label for="Excursion">Type d'excursion :</label>
-                    <select id="Excursion" name="id_excursion" required>
-                        <optgroup label="Types">
-                            <option value="">----- *</option>
-                            <option value="1">Le champs de poissons</option>
-                            <option value="2">Les terreurs des mers</option>
-                            <option value="3">Le monde caché</option>
-                            <option value="4">Les oiseaux aquatiques</option>
-                            <option value="5">La danse des méduses</option>
-                            <option value="6">Exploration d'épaves</option>
-                        </optgroup>
-                    </select><br>
-                    <label for="jour">Jour :</label>
-                    <input type="date" id="jour" name="date_reservation" min="<?= date('Y-m-d')?>"><br>
-                    <label for="Horaire">Horaire :</label>
-                    <select id="Horaire" name="horaire" required>
-                        <optgroup label="Horaires">
-                            <option value="">..h - ..h *</option>
-                            <option value="8">8h -10h</option>
-                            <option value="10">10h -12h</option>
-                            <option value="13">13h -15h</option>
-                            <option value="15">15h -17h</option>
-                        </optgroup>
-                    </select><br>
-                    <label for="nombre">Nombre de billets :</label>
-                    <input type="number" id="nombre" name="nombre_billets" min="1" max="10" required><br>
-                    <div class="custom-btn-box">
-                        <button type="submit" name="valider">Valider</button>
-                    </div>
-                </form>
+    <h3 class="custom-subtitle">Excursion</h3>
+    <label for="Excursion">Type d'excursion :</label>
+    <select id="id_excursion" name="id_excursion" required>
+        <optgroup label="Types">
+            <option value="">----- *</option>
+            <option value="1">Le champs de poissons</option>
+            <option value="2">Les terreurs des mers</option>
+            <option value="3">Le monde caché</option>
+            <option value="4">Les oiseaux aquatiques</option>
+            <option value="5">La danse des méduses</option>
+            <option value="6">Exploration d'épaves</option>
+        </optgroup>
+    </select><br>
+    <label for="jour">Jour :</label>
+    <input type="date" id="date_reservation" name="date_reservation" min="<?= date('Y-m-d')?>"><br>
+    <label for="Horaire">Horaire :</label>
+    <select id="horaire" name="horaire" required>
+        <optgroup label="Horaires">
+            <option value="">..h - ..h *</option>
+            <option value="8">8h -10h</option>
+            <option value="10">10h -12h</option>
+            <option value="13">13h -15h</option>
+            <option value="15">15h -17h</option>
+        </optgroup>
+    </select><br>
+    <label for="nombre">Nombre de billets :</label>
+    <input type="number" id="nombre_billets" name="nombre_billets" min="1" max="10" required><br>
+    <div class="custom-btn-box">
+        <button type="submit" name="valider">Valider</button>
+    </div>
+</form>
+
             </div>
         </div>
     </section>
